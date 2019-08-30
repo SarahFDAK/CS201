@@ -1,10 +1,8 @@
 //
-//  main.cpp
-//  Hello
-//
-//  Created by Sarah Carter on 8/29/19.
-//  Copyright © 2019 Sarah Carter. All rights reserved.
-//
+//  hello.cpp
+//  Sarah Carter
+//  8/29/19
+//  Hello world repeat for CS201
 
 #include <iostream>
 
