@@ -1,10 +1,8 @@
 //
 //  game.cpp
-//  Game
-//
-//  Created by Sarah Carter on 8/29/19.
-//  Copyright © 2019 Sarah Carter. All rights reserved.
-//
+//  Sarah Carter
+//  8/29/19
+//  This program describes one of my favorite games in a printed string.
 
 #include <iostream>
 
