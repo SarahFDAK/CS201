@@ -41,7 +41,7 @@
 		3B4C9092232033E30080AB07 = {
 			isa = PBXGroup;
 			children = (
-				3B4C909D232033E30080AB07 /* L2p2 */,
+				3B4C909D232033E30080AB07 /* birthday */,
 				3B4C909C232033E30080AB07 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +54,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3B4C909D232033E30080AB07 /* L2p2 */ = {
+		3B4C909D232033E30080AB07 /* birthday */ = {
 			isa = PBXGroup;
 			children = (
 				3B4C909E232033E30080AB07 /* main.cpp */,
 			);
-			path = L2p2;
+			path = birthday;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
