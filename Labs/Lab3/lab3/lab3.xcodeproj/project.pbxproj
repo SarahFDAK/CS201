@@ -41,7 +41,7 @@
 		3BD087462322CE3000C1086A = {
 			isa = PBXGroup;
 			children = (
-				3BD087512322CE3000C1086A /* lab3 */,
+				3BD087512322CE3000C1086A /* lab03 */,
 				3BD087502322CE3000C1086A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +54,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3BD087512322CE3000C1086A /* lab3 */ = {
+		3BD087512322CE3000C1086A /* lab03 */ = {
 			isa = PBXGroup;
 			children = (
 				3BD087522322CE3000C1086A /* lab03.cpp */,
 			);
-			path = lab3;
+			path = lab03;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
