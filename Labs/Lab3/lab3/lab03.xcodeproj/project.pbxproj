@@ -23,7 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3BD0874F2322CE3000C1086A /* lab3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab3; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BD0874F2322CE3000C1086A /* lab03 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab03; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD087522322CE3000C1086A /* lab03.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab03.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,7 +49,7 @@
 		3BD087502322CE3000C1086A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3BD0874F2322CE3000C1086A /* lab3 */,
+				3BD0874F2322CE3000C1086A /* lab03 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,9 +65,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3BD0874E2322CE3000C1086A /* lab3 */ = {
+		3BD0874E2322CE3000C1086A /* lab03 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3BD087562322CE3000C1086A /* Build configuration list for PBXNativeTarget "lab3" */;
+			buildConfigurationList = 3BD087562322CE3000C1086A /* Build configuration list for PBXNativeTarget "lab03" */;
 			buildPhases = (
 				3BD0874B2322CE3000C1086A /* Sources */,
 				3BD0874C2322CE3000C1086A /* Frameworks */,
@@ -77,9 +77,9 @@
 			);
 			dependencies = (
 			);
-			name = lab3;
+			name = lab03;
 			productName = lab3;
-			productReference = 3BD0874F2322CE3000C1086A /* lab3 */;
+			productReference = 3BD0874F2322CE3000C1086A /* lab03 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +96,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3BD0874A2322CE3000C1086A /* Build configuration list for PBXProject "lab3" */;
+			buildConfigurationList = 3BD0874A2322CE3000C1086A /* Build configuration list for PBXProject "lab03" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -108,7 +108,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3BD0874E2322CE3000C1086A /* lab3 */,
+				3BD0874E2322CE3000C1086A /* lab03 */,
 			);
 		};
 /* End PBXProject section */
@@ -257,7 +257,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3BD0874A2322CE3000C1086A /* Build configuration list for PBXProject "lab3" */ = {
+		3BD0874A2322CE3000C1086A /* Build configuration list for PBXProject "lab03" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3BD087542322CE3000C1086A /* Debug */,
@@ -266,7 +266,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3BD087562322CE3000C1086A /* Build configuration list for PBXNativeTarget "lab3" */ = {
+		3BD087562322CE3000C1086A /* Build configuration list for PBXNativeTarget "lab03" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3BD087572322CE3000C1086A /* Debug */,
