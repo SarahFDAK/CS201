@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BD087532322CE3000C1086A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3BD087522322CE3000C1086A /* main.cpp */; };
+		3BD087532322CE3000C1086A /* lab3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3BD087522322CE3000C1086A /* lab3.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		3BD0874F2322CE3000C1086A /* lab3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab3; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BD087522322CE3000C1086A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3BD087522322CE3000C1086A /* lab3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab3.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		3BD087512322CE3000C1086A /* lab3 */ = {
 			isa = PBXGroup;
 			children = (
-				3BD087522322CE3000C1086A /* main.cpp */,
+				3BD087522322CE3000C1086A /* lab3.cpp */,
 			);
 			path = lab3;
 			sourceTree = "<group>";
@@ -118,7 +118,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BD087532322CE3000C1086A /* main.cpp in Sources */,
+				3BD087532322CE3000C1086A /* lab3.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
