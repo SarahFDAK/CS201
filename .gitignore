@@ -1,0 +1,48 @@
+Last login: Fri Sep  6 09:25:21 on ttys000
+Sarahs-MacBook-Pro:~ Mine$ cd cs201
+Sarahs-MacBook-Pro:cs201 Mine$ git add .gitignore
+fatal: pathspec '.gitignore' did not match any files
+Sarahs-MacBook-Pro:cs201 Mine$ vim .gitignore
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+
