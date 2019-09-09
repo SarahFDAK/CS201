@@ -1,15 +1,21 @@
 //
-//  main.cpp
-//  lab3
-//
-//  Created by Sarah Carter on 9/6/19.
-//  Copyright © 2019 Sarah Carter. All rights reserved.
+//  lab03.cpp
+//  Sarah Carter
+//  09/09/19
+//  This program will demonstrate the use of while loops and interactions with
+//      the user.
 //
 
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    //Prints the numbers 1-20, then exits the program.
+    int i = 1;
+    while(i <=20)
+    {
+        std::cout << i << std::endl;
+        i++;
+    }
     return 0;
 }
