@@ -24,6 +24,7 @@ int main(int argc, const char * argv[]) {
                 {
                     std::cout << i + 1 << " ";
                 }
+                std::cout << std::endl;
                 break;
             }
             case 2:
