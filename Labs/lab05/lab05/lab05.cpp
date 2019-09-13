@@ -37,12 +37,15 @@ int main(int argc, const char * argv[]) {
                 break;
             }
             case 3:
+            {
                 std::string statement;
                 std::cout << "What do you want to say?" <<std::endl;
-                std::cin >>statement;
+                std::cin.ignore();
+                std::getline(std::cin, statement);
                 std::cout << "You said " << statement << "." << std::endl;
                 break;
             }
+        }
     return 0;
 }
 
