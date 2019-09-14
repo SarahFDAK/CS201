@@ -11,12 +11,12 @@ int main(int argc, const char * argv[]) {
     int user_num = 0; //Initialize and assign a variable to receive user input
     std::cout << "Please enter an integer to build a diamond pattern: \n";
     std::cin >> user_num;
-    while(user_num<=0)
+    while(user_num<=0) //Check user input to make sure it's a positive integer
     {
-        std::cout << "Please enter a positive integer: \n";
-        std::cin.clear();
-        std::cin.ignore();
-        std::cin >> user_num;
+        std::cout << "Please enter a positive integer: \n"; //If incorrect, request new input
+        std::cin.clear(); //Clear previous inputs
+        std::cin.ignore(); //Ignore spaces and new lines
+        std::cin >> user_num; //Save new input to check
     }
     for(int i = 0; i < user_num; i++) //Print the top of the diamond
     {
