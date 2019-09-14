@@ -11,7 +11,13 @@ int main(int argc, const char * argv[]) {
     int user_num = 0; //Initialize and assign a variable to receive user input
     std::cout << "Please enter an integer to build a diamond pattern: \n";
     std::cin >> user_num;
-    
+    while(user_num<=0)
+    {
+        std::cout << "Please enter a positive integer: \n";
+        std::cin.clear();
+        std::cin.ignore();
+        std::cin >> user_num;
+    }
     for(int i = 0; i < user_num; i++) //Print the top of the diamond
     {
         for(int j = 0; j < (user_num - i - 1); j++) //Print spaces
@@ -39,3 +45,4 @@ int main(int argc, const char * argv[]) {
     }
     return 0;
 }
+
