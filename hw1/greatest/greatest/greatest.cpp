@@ -10,15 +10,22 @@ int entrynum();
 
 int main(int argc, const char * argv[]) {
     int greater = 0;
-    while(entrynum() > 0)
-    {
-        if(entrynum() > greater)
-        {
-            greater = entrynum();
-        }
-        entrynum();
-    }
     
+    if(entrynum() <= 0)
+    {
+        std::cout << "You didn't enter a positive number.\n";
+    }
+    else
+    {
+        while(entrynum() > 0)
+        {
+            int holder = entrynum();
+            if(holder > greater)
+            {
+                greater = holder;
+            }
+        }
+    }
     std::cout << "The greatest number you entered was " << greater << "." << std::endl;
     return 0;
 }
