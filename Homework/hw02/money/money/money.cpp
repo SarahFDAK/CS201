@@ -7,22 +7,27 @@
 //
 
 #include <iostream>
+#include <iomanip>
+#include <stdlib.h>
 #include <vector>
 
 //Define prototypes
-double CashCount(int pennies, int nickels, int dimes, int quarters, int dollars);
-void PrintQtys(int pennies, int nickels, int dimes, int quarters, int dollars);
+double CashCount(std::vector<int> & qtys);
+void PrintQtys(std::vector<std::string> & coins, std::vector<std::string> & singles, std::vector<int> & qtys);
 std::vector<std::string> makeVector(std::vector<std::string> & coins);
+std::vector<std::string> makeSinglesVector(std::vector<std::string> & singles);
 std::vector<int> makeQtyVector(std::vector<std::string> & coins, std::vector<int> & qtys);
 
 int main(int argc, const char * argv[]) {
     std::vector<std::string> coins;
     makeVector(coins);
-
+    std::vector<std::string> singles;
+    makeSinglesVector(singles);
     std::vector<int> qtys;
     makeQtyVector(coins, qtys);
 
-//     Call print function
+    //Call print function
+    PrintQtys(coins, singles, qtys);
     
     return 0;
 }
@@ -37,39 +42,18 @@ double CashCount(std::vector<int> & qtys){
     return centCount;
 }
 //Print the number of each coin, using singular nouns when appropriate.
-void PrintQtys(int pennies, int nickels, int dimes, int quarters, int dollars){
-    if(pennies == 1){
-        std::cout << "You have 1 penny.\n";
+void PrintQtys(std::vector<std::string> & coins, std::vector<std::string> & singles, std::vector<int> & qtys){
+    for(int i = 0; i < coins.size(); i++){
+        if(qtys[i]==1){
+            std::cout << "You have 1 " << singles[i] << std::endl;
+        }
+        else{
+            std::cout << "You have " << qtys[i] << " " << coins[i] << "." << std::endl;
+        }
     }
-    else{
-        std::cout << "You have " << pennies << " pennies.\n";
-    }
-    if(nickels == 1){
-        std::cout << "You have 1 nickel.\n";
-    }
-    else{
-        std::cout << "You have " << nickels << " nickels.\n";
-    }
-    if(dimes == 1){
-        std::cout << "You have 1 dime.\n";
-    }
-    else{
-        std::cout << "You have " << dimes << " dimes.\n";
-    }
-    if(quarters == 1){
-        std::cout << "You have 1 quarter.\n";
-    }
-    else{
-        std::cout << "You have " << quarters << " quarters.\n";
-    }
-    if(dollars == 1){
-        std::cout << "You have 1 dollar";
-    }
-    else{
-        std::cout << "You have " << dollars << " one-dollar coins.\n";
-    }
-    //Print the total dollar value of all the coins.
-    std::cout << "You have a total of $" << CashCount(pennies, nickels, dimes, quarters, dollars)/100 << "." << std::endl;
+    std::cout << std::fixed;
+    std::cout << std::setprecision(2);
+    std::cout << "You have a total of $" << CashCount(qtys)/100 << "." << std::endl;
 }
 
 std::vector<std::string> makeVector(std::vector<std::string> & coins){
@@ -80,6 +64,15 @@ std::vector<std::string> makeVector(std::vector<std::string> & coins){
     coins.push_back("quarters");
     coins.push_back("one-dollar coins");
     return coins;
+}
+
+std::vector<std::string> makeSinglesVector(std::vector<std::string> & singles){
+    singles.push_back("penny");
+    singles.push_back("nickel");
+    singles.push_back("dime");
+    singles.push_back("quarter");
+    singles.push_back("one-dollar coin");
+    return singles;
 }
 
 std::vector<int> makeQtyVector(std::vector<std::string> & coins, std::vector<int> & qtys){
