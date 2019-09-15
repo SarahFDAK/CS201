@@ -22,6 +22,7 @@ int main(int argc, const char * argv[]) {
     std::string nameToFind; //Define string variable
     std::cout << "Please enter the name you're looking for: ";
     std::cin >> nameToFind;
+    std::cout << std::endl; //Add extra line for delineation
     DoesNameExist(nameToFind, names); //Call function to see if name is in the vector
     //Tell the user if the name is or isn't in the list.
     if(DoesNameExist(nameToFind, names)==true){
@@ -30,9 +31,11 @@ int main(int argc, const char * argv[]) {
     else{
         std::cout << "The name " << nameToFind << " is not in the list.\n";
     }
+    std::cout << std::endl; //Add extra line for delineation.
     //Print the list as the user entered it.
     std::cout << "Here are the names in the order you entered them: \n";
     PrintNames(names);
+    std::cout << std::endl; //Add an extra line for delineation.
     //Print the list in alphabetical order.
     std::cout << "Here are the names in alphabetical order: \n";
     SortNames(names);
@@ -68,5 +71,5 @@ void PrintNames(const std::vector<std::string> & names){
 //Sort the names into alphabetical order
 void SortNames(std::vector<std::string> & names){
     std::sort(names.begin(),names.end());
-    PrintNames(names);
+    PrintNames(names); //Print the sorted names
 }
