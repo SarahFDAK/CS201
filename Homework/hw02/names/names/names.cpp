@@ -2,7 +2,7 @@
 //  names.cpp
 //  Sarah Carter
 //  9/13/19
-//
+//  This program will build a vector containing ten names input by the user, then will ask the user for a name to search for and tell them if that name is or isn't in the list(vector) they created.
 
 #include <iostream>
 #include <vector>
@@ -12,7 +12,7 @@
 //Define prototypes
 void InputNames(std::vector<std::string> & names);
 bool DoesNameExist(const std::string & nameToFind, const std::vector<std::string> & names);
-
+void PrintNames(const std::vector<std::string> & names);
 
 int main(int argc, const char * argv[]) {
     std::vector<std::string> names; //Define the vector "names."
@@ -29,6 +29,7 @@ int main(int argc, const char * argv[]) {
     else{
         std::cout << "The name " << nameToFind << " is not in the list.\n";
     }
+    PrintNames(names);
     return 0;
 }
 
@@ -51,4 +52,10 @@ bool DoesNameExist(const std::string & nameToFind, const std::vector<std::string
         ans=true; //If name is found, changes ans to true.
     }
     return ans;
+}
+//Print the list of names entered in the vector.
+void PrintNames(const std::vector<std::string> & names){
+    for(int i = 0; i < names.size(); i++){
+        std::cout << names[i] << std::endl;
+    }
 }
