@@ -13,6 +13,7 @@
 void InputNames(std::vector<std::string> & names);
 bool DoesNameExist(const std::string & nameToFind, const std::vector<std::string> & names);
 void PrintNames(const std::vector<std::string> & names);
+void SortNames(std::vector<std::string> & names);
 
 int main(int argc, const char * argv[]) {
     std::vector<std::string> names; //Define the vector "names."
@@ -29,7 +30,12 @@ int main(int argc, const char * argv[]) {
     else{
         std::cout << "The name " << nameToFind << " is not in the list.\n";
     }
+    //Print the list as the user entered it.
+    std::cout << "Here are the names in the order you entered them: \n";
     PrintNames(names);
+    //Print the list in alphabetical order.
+    std::cout << "Here are the names in alphabetical order: \n";
+    SortNames(names);
     return 0;
 }
 
@@ -58,4 +64,9 @@ void PrintNames(const std::vector<std::string> & names){
     for(int i = 0; i < names.size(); i++){
         std::cout << names[i] << std::endl;
     }
+}
+//Sort the names into alphabetical order
+void SortNames(std::vector<std::string> & names){
+    std::sort(names.begin(),names.end());
+    PrintNames(names);
 }
