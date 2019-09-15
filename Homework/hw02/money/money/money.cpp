@@ -19,14 +19,17 @@ std::vector<std::string> makeSinglesVector(std::vector<std::string> & singles);
 std::vector<int> makeQtyVector(std::vector<std::string> & coins, std::vector<int> & qtys);
 
 int main(int argc, const char * argv[]) {
+    //Define and fill coin names vector
     std::vector<std::string> coins;
     makeVector(coins);
+    //Define and fill singular coin names vector
     std::vector<std::string> singles;
     makeSinglesVector(singles);
+    //Define and fill coin quantities vector
     std::vector<int> qtys;
     makeQtyVector(coins, qtys);
 
-    //Call print function
+    //Call print function to print results for user
     PrintQtys(coins, singles, qtys);
     
     return 0;
@@ -44,18 +47,19 @@ double CashCount(std::vector<int> & qtys){
 //Print the number of each coin, using singular nouns when appropriate.
 void PrintQtys(std::vector<std::string> & coins, std::vector<std::string> & singles, std::vector<int> & qtys){
     for(int i = 0; i < coins.size(); i++){
-        if(qtys[i]==1){
+        if(qtys[i]==1){ //Check if the coin's quantity is exactly 1
             std::cout << "You have 1 " << singles[i] << std::endl;
         }
         else{
             std::cout << "You have " << qtys[i] << " " << coins[i] << "." << std::endl;
         }
     }
+    //Set the printout to show trailing zeros and print total dollars.
     std::cout << std::fixed;
     std::cout << std::setprecision(2);
     std::cout << "You have a total of $" << CashCount(qtys)/100 << "." << std::endl;
 }
-
+//Build the vector that holds the plural coin names.
 std::vector<std::string> makeVector(std::vector<std::string> & coins){
 
     coins.push_back("pennies");
@@ -65,7 +69,7 @@ std::vector<std::string> makeVector(std::vector<std::string> & coins){
     coins.push_back("one-dollar coins");
     return coins;
 }
-
+//Build vector that holds singular coin names
 std::vector<std::string> makeSinglesVector(std::vector<std::string> & singles){
     singles.push_back("penny");
     singles.push_back("nickel");
@@ -74,14 +78,15 @@ std::vector<std::string> makeSinglesVector(std::vector<std::string> & singles){
     singles.push_back("one-dollar coin");
     return singles;
 }
-
+//Build vector that holds coin quantities
 std::vector<int> makeQtyVector(std::vector<std::string> & coins, std::vector<int> & qtys){
+    //For each coin name in coins vector, request a quantity and push it to qtys vector
     for(int i = 0; i < coins.size(); i++){
         std::cout << "How many " << coins[i] << " do you have?";
         int num;
         std::cin >> num;
         qtys.push_back(num);
-        std::cin.ignore();
+        std::cin.ignore(); //Clear out cin so it takes new inputs.
         }
     return qtys;
 }
