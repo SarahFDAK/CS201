@@ -1,9 +1,8 @@
 //
-//  main.cpp
-//  money
-//
-//  Created by Sarah Carter on 9/15/19.
-//  Copyright © 2019 Sarah Carter. All rights reserved.
+//  money.cpp
+//  Sarah Carter
+//  9/15/19
+//  This program requests numbers of coins from the user, then reports those numbers back, along with the total dollar total of the listed coins.
 //
 
 #include <iostream>
