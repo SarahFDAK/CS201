@@ -9,9 +9,17 @@
 #include <string>
 #include <algorithm>
 
+//Define prototype
+void InputNames(std::vector<std::string> & names);
 
 int main(int argc, const char * argv[]) {
     std::vector<std::string> names;
+    InputNames(names);
+    return 0;
+}
+
+void InputNames(std::vector<std::string> & names)
+{
     for(int i = 0; i < 10; i++)
     {
         std::string name;
@@ -19,7 +27,4 @@ int main(int argc, const char * argv[]) {
         std::getline(std::cin, name);
         names.push_back(name);
     }
-    return 0;
 }
-
-
