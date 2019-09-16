@@ -8,14 +8,14 @@
 #include <iostream>
 #include <vector>
 
+//Define prototypes
 void PrintResults(std::vector<std::string> & names, std::vector<int> & scores);
 bool QuitAsking(std::string & name, int & score);
-std::vector<std::string> initNames(std::vector<std::string> & names);
-std::vector<int> initScores(std::vector<int> & scores);
 bool DoesNameExist(std::string & name, std::vector<std::string> & names);
 
 
 int main(int argc, const char * argv[]) {
+    //Set the initial size of the vectors so the for statement will run
     std::vector<std::string> names(1);
     std::vector<int> scores(1);
     std::string name;
@@ -23,7 +23,9 @@ int main(int argc, const char * argv[]) {
     for(int i = 0; i < names.size(); i++){
         std::cout << "Enter a name and their score. Type 'NoName 0' to exit.\n";
         std::cin>>name>>score;
+        //Check if user entered 'NoName 0'
         if(QuitAsking(name, score)==false){
+            //Check if name is already in the vector
             if(DoesNameExist(name, names)==false){
                 names.push_back(name);
                 scores.push_back(score);
@@ -38,16 +40,16 @@ int main(int argc, const char * argv[]) {
             }
         }
     }
-    PrintResults(names, scores);
+    PrintResults(names, scores); //Print names and scores
     return 0;
 }
-
+//Print all entries in the vectors
 void PrintResults(std::vector<std::string> & names, std::vector<int> & scores){
     for(int i = 0; i < names.size(); i++){
         std::cout << names[i] << " has a score of " << scores[i] << "." << std::endl;
     }
 }
-
+//Return true or false depending on user input of name and score
 bool QuitAsking(std::string & name, int & score){
     bool quit = false;
     if(name == "NoName" && score == 0){
@@ -55,23 +57,7 @@ bool QuitAsking(std::string & name, int & score){
     }
     return quit;
 }
-
-std::vector<std::string> initNames(std::vector<std::string> & names){
-    std::string name;
-    std::cout << "Enter a name: ";
-    std::cin >> name;
-    names.push_back(name);
-    return names;
-}
-
-std::vector<int> initScores(std::vector<int> & scores){
-    int score;
-    std::cout << "Enter their score: ";
-    std::cin >> score;
-    scores.push_back(score);
-    return scores;
-}
-
+//Return true or false whether name is already entered in the vector
 bool DoesNameExist (std::string & name, std::vector<std::string> & names)
 {
     bool ans = false; //Sets the returned answer to a default of false.
