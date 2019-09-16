@@ -15,11 +15,14 @@ using std::endl;
 void stringInfo(string input);
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    string input;
+    cout << "What word do you want printed?" << endl;
+    std::getline(std::cin, input);
+    stringInfo(input);
     return 0;
 }
 
 void stringInfo(string input){
-    
+    float length = input.size();
+    cout << "Your string " << input << " is " << length << " characters long." << endl;
 }
