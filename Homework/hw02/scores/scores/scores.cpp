@@ -16,10 +16,8 @@ bool DoesNameExist(std::string & name, std::vector<std::string> & names);
 
 
 int main(int argc, const char * argv[]) {
-    std::vector<std::string> names;
-    std::vector<int> scores;
-    initNames(names);
-    initScores(scores);
+    std::vector<std::string> names(1);
+    std::vector<int> scores(1);
     std::string name;
     int score;
     for(int i = 0; i < names.size(); i++){
