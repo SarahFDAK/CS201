@@ -10,5 +10,6 @@
 #include <iostream>
 
 void askForInput(){
-    std::cout << "Enter a number " << std::endl;
+
+    std::cout << "Please enter a number ";
 }

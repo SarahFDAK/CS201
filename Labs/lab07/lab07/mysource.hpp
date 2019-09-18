@@ -11,6 +11,6 @@
 
 #include <stdio.h>
 
-
+void askForInput();
 
 #endif /* mysource_hpp */
