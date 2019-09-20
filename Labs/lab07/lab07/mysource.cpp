@@ -11,5 +11,5 @@
 
 void askForInput(){
 
-    std::cout << "Please enter a number ";
+    std::cout << "Please enter a number: ";
 }

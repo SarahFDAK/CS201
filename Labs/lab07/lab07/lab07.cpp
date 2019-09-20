@@ -12,17 +12,11 @@
 
 int main(int argc, const char * argv[]) {
     askForInput();
-    int num = getInt();
-    askForInput();
-    int num1 = getInt();
-    askForInput();
-    int num2 = getInt();
-    putInt(num, 10);
-    std::cout << std::endl;
-    putInt(num1, 10);
-    std::cout << std::endl;
-    putInt(num2, 10);
-    std::cout << std::endl;
+    int input = 0;
+    for(std::cin >> input; input >0; ){
+        putInt(getInt(), 10);
+        std::cout << std::endl;
+    }
     
     return 0;
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3B5354122335465800855304 /* lab08.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B5354112335465800855304 /* lab08.cpp */; };
+		3B53541C2335470A00855304 /* lab8_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B5354182335470A00855304 /* lab8_main.cpp */; };
+		3B53541D2335470A00855304 /* intio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B53541A2335470A00855304 /* intio.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		3B53540E2335465800855304 /* lab08 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab08; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5354112335465800855304 /* lab08.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab08.cpp; sourceTree = "<group>"; };
+		3B5354182335470A00855304 /* lab8_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lab8_main.cpp; path = ../../lab8_main.cpp; sourceTree = "<group>"; };
+		3B5354192335470A00855304 /* intio.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = intio.hpp; path = ../../intio.hpp; sourceTree = "<group>"; };
+		3B53541A2335470A00855304 /* intio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = intio.cpp; path = ../../intio.cpp; sourceTree = "<group>"; };
+		3B53541B2335470A00855304 /* lab8.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = lab8.hpp; path = ../../lab8.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				3B5354112335465800855304 /* lab08.cpp */,
+				3B53541A2335470A00855304 /* intio.cpp */,
+				3B5354192335470A00855304 /* intio.hpp */,
+				3B5354182335470A00855304 /* lab8_main.cpp */,
+				3B53541B2335470A00855304 /* lab8.hpp */,
 			);
 			path = lab08;
 			sourceTree = "<group>";
@@ -119,6 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B5354122335465800855304 /* lab08.cpp in Sources */,
+				3B53541C2335470A00855304 /* lab8_main.cpp in Sources */,
+				3B53541D2335470A00855304 /* intio.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
