@@ -25,6 +25,6 @@ int main(int argc, const char * argv[]) {
         std::cin.clear();
         std::cin >> userWord >> userInt;
     }
-    std::cout << "Thank you for your participation!";
+    std::cout << "Thank you for your participation!\n";
     return 0;
 }
