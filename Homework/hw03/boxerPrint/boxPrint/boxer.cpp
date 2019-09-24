@@ -7,3 +7,14 @@
 //
 
 #include "boxer.hpp"
+#include <iostream>
+
+void boxer(std::string userWord, int userInt){
+    int length = userWord.size();
+    for (int i = 0; i < userInt; i++){
+        for (int j = 0; j < (2*userInt)+length +2; j++){
+            std::cout << "*";
+        }
+        std::cout << std::endl;
+    }
+}

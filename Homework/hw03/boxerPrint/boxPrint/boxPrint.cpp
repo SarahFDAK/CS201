@@ -7,9 +7,24 @@
 //
 
 #include <iostream>
+#include "boxer.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    std::string userWord;
+    int userInt;
+    std::cout << "Please enter a word and a positive integer (enter a 0 to exit): " << std::endl;
+    std::cin >> userWord >> userInt;
+    while(userInt < 0){
+        std::cout << "Please enter a positive integer, or 0 to exit: " << std::endl;
+        std::cin.clear();
+        std::cin >> userInt;
+    }
+    while(userInt > 0){
+        boxer(userWord, userInt);
+        std::cout << "Please enter a word and a positive integer (enter a 0 to exit): " << std::endl;
+        std::cin.clear();
+        std::cin >> userWord >> userInt;
+    }
+    std::cout << "Thank you for your participation!";
     return 0;
 }

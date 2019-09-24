@@ -10,6 +10,8 @@
 #define boxer_hpp
 
 #include <stdio.h>
+#include <iostream>
 
+void boxer(std::string userWord, int userInt);
 
 #endif /* boxer_hpp */
