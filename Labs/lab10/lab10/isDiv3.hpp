@@ -12,5 +12,6 @@
 #include <stdio.h>
 
 bool isDiv3(int n);
+bool isADivB(int a, int b);
 
 #endif /* isDiv3_hpp */

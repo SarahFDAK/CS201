@@ -7,3 +7,19 @@
 //
 
 #include "isDiv3.hpp"
+#include <iostream>
+
+bool isDiv3(int n){
+    bool div = false;
+    if(n % 3 == 0){
+        div = true;
+    }
+    return div;
+}
+
+bool isADivB(int a, int b){
+    if(a % b == 0){
+        return true;
+    }
+    return false;
+}
