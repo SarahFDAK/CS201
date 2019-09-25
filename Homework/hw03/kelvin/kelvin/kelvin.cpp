@@ -15,6 +15,7 @@ double ctok(double c){
 
 int main(){
     double c = 0;
+    std::cout << "Enter a celcius temperature to convert to kelvin: \n";
     std::cin >> c;
     while(c < -273.15){
         std::cout << "Please enter a temperature that can exist (is greater than absolute zero): \n";
