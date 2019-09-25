@@ -25,16 +25,16 @@ int main(){
     std::cout << k << "\n";
     return 0;
 }
-
-double ctok(double c){
-    int k = c + 273.15;
-    return int; //Should return k
-}
-int main(int argc, const char * argv[]) {
-    double c = 0;
-    cin >> d; //std library not declared, does not request a number, variable d is not declared or initialized.
-    double k = ctok("c"); //passes a string, not a double, to ctok
-    Cout << k << '/n'; //std library is not included, "Cout" should not be capitalized, end line command should be in double quotes and needs back, not forward, slash.
-    //no return statement - maybe not necessary?
-}
+//
+//double ctok(double c){
+//    int k = c + 273.15;
+//    return int; //Should return k
+//}
+//int main(int argc, const char * argv[]) {
+//    double c = 0;
+//    cin >> d; //std library not declared, does not request a number, variable d is not declared or initialized.
+//    double k = ctok("c"); //passes a string, not a double, to ctok
+//    Cout << k << '/n'; //std library is not included, "Cout" should not be capitalized, end line command should be in double quotes and needs back, not forward, slash.
+//    //no return statement - maybe not necessary?
+//}
 
