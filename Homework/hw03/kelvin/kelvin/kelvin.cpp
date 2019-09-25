@@ -9,7 +9,7 @@
 #include <iostream>
 
 double ctok(double c){
-    int k = c + 273.15;
+    double k = c + 273.15;
     return k;
 }
 
@@ -28,8 +28,8 @@ int main(){
 }
 //
 //double ctok(double c){
-//    int k = c + 273.15;
-//    return int; //Should return k
+//    int k = c + 273.15; //k need to be a double
+//    return int; //Should return k, which is a double, not an int
 //}
 //int main(int argc, const char * argv[]) {
 //    double c = 0;
