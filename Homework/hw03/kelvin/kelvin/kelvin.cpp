@@ -1,9 +1,8 @@
 //
-//  main.cpp
-//  kelvin
-//
-//  Created by Sarah Carter on 9/25/19.
-//  Copyright © 2019 Sarah Carter. All rights reserved.
+//  kelvin.cpp
+//  Sarah Carter
+//  9/25/19
+//  This program asks the user for a temperature in degrees celcius, then returns that temperature in Kelvin. If the user submits a temperature below absolute zero (<-273.15), the program will request a new temperature that can exist.
 //
 
 #include <iostream>
@@ -23,7 +22,7 @@ int main(){
         std::cin >> c;
     }
     double k = ctok(c);
-    std::cout << k << "\n";
+    std::cout << k << "K\n";
     return 0;
 }
 //
