@@ -25,6 +25,7 @@ Sarahs-MacBook-Pro:cs201 Mine$ vim .gitignore
 *.gch
 *.pch
 *.xcuserstate
+*.DS_Store
 
 # Compiled Dynamic libraries
 *.so
