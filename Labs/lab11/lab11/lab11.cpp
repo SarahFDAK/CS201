@@ -13,10 +13,12 @@ int main(int argc, const char * argv[]) {
     std::string word;
     std::cout << "Enter a word: " << std::endl;
     std::getline(std::cin, word);
+    //Print only lowercase letters from user's word
     for(int i = 0; i < word.size(); i++){
         if(word[i] >= 'a' && word[i] <= 'z'){
-            std::cout << word[i] << std::endl;
+            std::cout << word[i];
         }
     }
+    std::cout << std::endl;
     return 0;
 }
