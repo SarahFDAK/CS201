@@ -20,7 +20,4 @@ void getUserStrings(std::vector<std::string> & words) {
             words.push_back(input);
         }
     }
-    for(int n = 0; n < words.size(); n++){
-        std::cout << words[n] << " ";
-    }
 }

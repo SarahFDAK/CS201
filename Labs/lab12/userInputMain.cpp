@@ -36,6 +36,14 @@ int main() {
 	std::cout << std::endl;
 	std::cout << "----------------------Additional 1----------------------"
 			<< std::endl;
+    for (unsigned long i = 0; i < words.size(); ++i) {
+        if(words[i].size() < 5){
+            continue;
+        }
+        else{
+            std::cout << words[i] << ' ';
+        }
+    }
 	// TODO print only words >= 5
 
 	char c = 'x';
