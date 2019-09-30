@@ -50,6 +50,14 @@ int main() {
 	std::cout << std::endl;
 	std::cout << "----------------------Additional 2----------------------"
 			<< std::endl;
+    for (unsigned long i = 0; i < words.size(); i++){
+        if(words[i].find_first_of(c) == std::string::npos){
+            continue;
+        }
+        else{
+            std::cout << words[i] << " ";
+        }
+    }
 	// TODO print only words containing char c
 
 	return 0;
