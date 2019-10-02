@@ -12,6 +12,10 @@
 #include <string>
 #include <vector>
 
+void vectorManip(std::vector<std::string> & words);
+
+void firstLetterChange(std::vector<std::string> & words, char & ch);
+
 /**
  * ADDITIONAL 1
  * Change the first character of each string in the vector using

@@ -7,9 +7,22 @@
 //
 
 #include <iostream>
+#include <vector>
+#include "vector_manip.hpp"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+using std::vector;
+
+void vectorManip(std::vector<std::string> & words) {
+    for(std::string & n : words){
+        std::cout << n << " ";
+    }
+}
+
+void firstLetterChange(std::vector<std::string> & words, char & ch){
+    for(std::string & n : words){
+        if(n.size()>0){
+            n[0] = ch;
+        }
+        std::cout << n << " ";
+    }
 }
