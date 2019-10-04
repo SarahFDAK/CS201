@@ -14,5 +14,6 @@ int main(int argc, const char * argv[]) {
     std::cout << "Enter a single word: \n";
     std::cin >> userWord;
     wordShrink(userWord);
+    wordShrinkCenter(userWord);
     return 0;
 }

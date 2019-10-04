@@ -13,5 +13,6 @@
 #include <iostream>
 
 void wordShrink(std::string userWord);
+void wordShrinkCenter(std::string userWord);
 
 #endif /* wordShrink_hpp */
