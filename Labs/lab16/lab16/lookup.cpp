@@ -35,6 +35,7 @@ bool sequentialSearch(vector<int> keys,
             return true;
         }
     }
+    
     return false;  // DUMMY
     // TODO: Write this!
 }
