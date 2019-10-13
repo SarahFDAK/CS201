@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B64A1702353EAFA00E3D67E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B64A16F2353EAFA00E3D67E /* main.cpp */; };
+		3B64A1702353EAFA00E3D67E /* tokenizertest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B64A16F2353EAFA00E3D67E /* tokenizertest.cpp */; };
+		3B64A1782353EB6800E3D67E /* tokenizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B64A1762353EB6800E3D67E /* tokenizer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,9 @@
 
 /* Begin PBXFileReference section */
 		3B64A16C2353EAFA00E3D67E /* hw04 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hw04; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B64A16F2353EAFA00E3D67E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3B64A16F2353EAFA00E3D67E /* tokenizertest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tokenizertest.cpp; sourceTree = "<group>"; };
+		3B64A1762353EB6800E3D67E /* tokenizer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tokenizer.cpp; sourceTree = "<group>"; };
+		3B64A1772353EB6800E3D67E /* tokenizer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = tokenizer.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +60,9 @@
 		3B64A16E2353EAFA00E3D67E /* hw04 */ = {
 			isa = PBXGroup;
 			children = (
-				3B64A16F2353EAFA00E3D67E /* main.cpp */,
+				3B64A16F2353EAFA00E3D67E /* tokenizertest.cpp */,
+				3B64A1762353EB6800E3D67E /* tokenizer.cpp */,
+				3B64A1772353EB6800E3D67E /* tokenizer.hpp */,
 			);
 			path = hw04;
 			sourceTree = "<group>";
@@ -119,7 +124,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B64A1702353EAFA00E3D67E /* main.cpp in Sources */,
+				3B64A1702353EAFA00E3D67E /* tokenizertest.cpp in Sources */,
+				3B64A1782353EB6800E3D67E /* tokenizer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
