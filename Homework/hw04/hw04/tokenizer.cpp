@@ -12,8 +12,15 @@
 #include <string>
 
 bool ReadLine(std::string & str){
-    if(!str){
+    std::cout << "Please enter a sentence or other type of string: \n";
+    std::getline(std::cin, str);
+    if(str == ""){
         return false;
     }
     return true;
+}
+
+
+unsigned StringToTokensWS(std::vector<std::string> & tokens){
+    
 }
