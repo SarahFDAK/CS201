@@ -12,8 +12,6 @@
 #include <string>
 
 bool ReadLine(std::string & str){
-    std::cout << "Please enter a sentence or other type of string: \n";
-    std::getline(std::cin, str);
     if(str == ""){
         return false;
     }
