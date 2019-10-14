@@ -10,5 +10,8 @@
 #define tokenizer_hpp
 
 #include <stdio.h>
+#include <iostream>
+
+bool ReadLine(std::string & str);
 
 #endif /* tokenizer_hpp */
