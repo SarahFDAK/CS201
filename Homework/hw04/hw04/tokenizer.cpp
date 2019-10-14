@@ -7,3 +7,13 @@
 //
 
 #include "tokenizer.hpp"
+#include <vector>
+#include <iostream>
+#include <string>
+
+bool ReadLine(std::string & str){
+    if(!str){
+        return false;
+    }
+    return true;
+}
