@@ -19,6 +19,6 @@ bool ReadLine(std::string & str){
 }
 
 
-unsigned StringToTokensWS(std::vector<std::string> & tokens){
+unsigned StringToTokensWS(std::string & str, std::vector<std::string> & tokens){
     
 }

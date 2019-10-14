@@ -7,9 +7,15 @@
 //
 
 #include <iostream>
+#include "tokenizer.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    std::string str;
+    
+    do{
+        std::cout << "Please enter a string - it can contain spaces and numbers: \n";
+        std::getline(std::cin, str);
+    } while(ReadLine(str));
     return 0;
 }
+
