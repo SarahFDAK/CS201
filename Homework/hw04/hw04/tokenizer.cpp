@@ -10,6 +10,7 @@
 #include <vector>
 #include <iostream>
 #include <string>
+#include <sstream>
 
 bool ReadLine(std::string & str){
     if(str == ""){
@@ -20,5 +21,10 @@ bool ReadLine(std::string & str){
 
 
 unsigned StringToTokensWS(std::string & str, std::vector<std::string> & tokens){
-    
+    int TokCount = 0;
+    while(ReadLine(str)){
+        std::istringstream token(str);
+        tokens.push_back(token);
+        TokCount ++;
+    }
 }

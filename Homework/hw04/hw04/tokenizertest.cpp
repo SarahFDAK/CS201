@@ -7,15 +7,18 @@
 //
 
 #include <iostream>
+#include <vector>
 #include "tokenizer.hpp"
 
 int main(int argc, const char * argv[]) {
     std::string str;
+    std::vector<std::string> tokens;
     
-    do{
-        std::cout << "Please enter a string - it can contain spaces and numbers: \n";
-        std::getline(std::cin, str);
-    } while(ReadLine(str));
+    std::cout << "Please enter a string - it can contain spaces and numbers: \n";
+//    do{
+//        std::cout << "Please enter a string - it can contain spaces and numbers: \n";
+//        std::getline(std::cin, str);
+//    } while(ReadLine(str));
     return 0;
 }
 
