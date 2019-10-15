@@ -37,7 +37,21 @@ unsigned StringToTokensWS(std::string & str, std::vector<std::string> & tokens){
 
 void AnalyzeTokens(const std::vector<std::string> & tokens){
     for(auto token: tokens){
-        std::cout << token << std::endl;
+        if(token[0] <= '9' && token[0] >='0'){
+            std::cout << "Integer" << "\"" << token << "\"" << std::endl;
+        }
+        else if(token[0] == '"' && token[token.size()-1] == '"'){
+            std::cout << "String" << "\"" << token << "\"" << std::endl;
+        }
+        else if(token[0] == '_' || (token[0] >='A' && token[0] <= 'z')){
+            std::cout << "Identifier" << "\"" << token << "\"" << std::endl;
+        }
+        else if(token == " "){
+            std::cout << "Whitespace ""\"" "\"" << std::endl;
+        }
+        else {
+            std::cout << "Unknown" << "\"" << token << "\"" <<std::endl;
+        }
     }
 }
 
