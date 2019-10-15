@@ -41,19 +41,19 @@ unsigned StringToTokensWS(std::string & str, std::vector<std::string> & tokens){
 void AnalyzeTokens(const std::vector<std::string> & tokens){
     for(auto token: tokens){
         if(token[0] <= '9' && token[0] >='0'){
-            std::cout << "Integer" << '\t' << "\"" << token << "\"" << std::endl;
+            std::cout << "[integer]" << '\t' << '\t' << "\"" << token << "\"" << std::endl;
         }
         else if(token[0] == '"' && token[token.size()-1] == '"'){
-            std::cout << "String" << '\t' << "\\" << token << "\\" << std::endl;
+            std::cout << "[string]" << '\t' << '\t' << "\"\\" << token << "\\""\"" << std::endl;
         }
         else if(token[0] == '_' || (token[0] >='A' && token[0] <= 'z')){
-            std::cout << "Identifier" << '\t' << """\"" << token << """\"" << std::endl;
+            std::cout << "[identifier]" << '\t' << "\"" << token << "\"" << std::endl;
         }
         else if(token == "\n"){
-            std::cout << "Whitespace" << '\t' << "\"" "\"" << std::endl;
+            std::cout << "[whitespace]" << '\t' << "\"" "\"" << std::endl;
         }
         else {
-            std::cout << "Unknown" << '\t' << "\"" << token << "\"" <<std::endl;
+            std::cout << "[unknown]" << '\t' << '\t' << "\"" << token << "\"" <<std::endl;
         }
     }
 }
