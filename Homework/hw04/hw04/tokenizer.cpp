@@ -25,10 +25,10 @@ bool ReadLine(std::string & str){
 unsigned StringToTokensWS(std::string & str, std::vector<std::string> & tokens){
 
     std::istringstream tok(str);
+    std::string text;
+    tok >> text;
     while(tok){
-        std::string token;
-        tok >> token;
-        tokens.push_back(token);
+        tokens.push_back(text);
     }
 
     return int(tokens.size());
@@ -39,4 +39,13 @@ void AnalyzeTokens(const std::vector<std::string> & tokens){
     for(auto token: tokens){
         std::cout << token << std::endl;
     }
+}
+
+
+bool Finish(const std::string & str){
+    if(str == "end" || str == "End" || str == "END"){
+        return false;
+    }
+
+    return true;
 }
