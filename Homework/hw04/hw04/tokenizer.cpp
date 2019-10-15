@@ -30,7 +30,10 @@ unsigned StringToTokensWS(std::string & str, std::vector<std::string> & tokens){
     while(token >> text) {
         tokens.push_back(text);
     }
-
+    if(Finish(str)){
+        tokens.push_back("\n");
+    }
+    
     return int(tokens.size());
 }
 
@@ -38,19 +41,19 @@ unsigned StringToTokensWS(std::string & str, std::vector<std::string> & tokens){
 void AnalyzeTokens(const std::vector<std::string> & tokens){
     for(auto token: tokens){
         if(token[0] <= '9' && token[0] >='0'){
-            std::cout << "Integer" << "\"" << token << "\"" << std::endl;
+            std::cout << "Integer" << '\t' << "\"" << token << "\"" << std::endl;
         }
         else if(token[0] == '"' && token[token.size()-1] == '"'){
-            std::cout << "String" << "\"" << token << "\"" << std::endl;
+            std::cout << "String" << '\t' << "\\" << token << "\\" << std::endl;
         }
         else if(token[0] == '_' || (token[0] >='A' && token[0] <= 'z')){
-            std::cout << "Identifier" << "\"" << token << "\"" << std::endl;
+            std::cout << "Identifier" << '\t' << """\"" << token << """\"" << std::endl;
         }
-        else if(token == " "){
-            std::cout << "Whitespace ""\"" "\"" << std::endl;
+        else if(token == "\n"){
+            std::cout << "Whitespace" << '\t' << "\"" "\"" << std::endl;
         }
         else {
-            std::cout << "Unknown" << "\"" << token << "\"" <<std::endl;
+            std::cout << "Unknown" << '\t' << "\"" << token << "\"" <<std::endl;
         }
     }
 }
