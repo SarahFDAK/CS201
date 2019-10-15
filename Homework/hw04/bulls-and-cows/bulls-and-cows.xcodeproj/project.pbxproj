@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B372A6223565DC500AEFEE7 /* bulls-and-cows.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B372A6123565DC500AEFEE7 /* bulls-and-cows.cpp */; };
+		3B372A7B2356681F00AEFEE7 /* bulls-and-cows.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B372A7A2356681F00AEFEE7 /* bulls-and-cows.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3B372A5C23565DC500AEFEE7 /* CopyFiles */ = {
+		3B372A752356681F00AEFEE7 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3B372A5E23565DC500AEFEE7 /* bulls-and-cows */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "bulls-and-cows"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B372A6123565DC500AEFEE7 /* bulls-and-cows.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "bulls-and-cows.cpp"; sourceTree = "<group>"; };
+		3B372A772356681F00AEFEE7 /* bulls-and-cows */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "bulls-and-cows"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B372A7A2356681F00AEFEE7 /* bulls-and-cows.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "bulls-and-cows.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3B372A5B23565DC500AEFEE7 /* Frameworks */ = {
+		3B372A742356681F00AEFEE7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,26 +38,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B372A5523565DC500AEFEE7 = {
+		3B372A6E2356681F00AEFEE7 = {
 			isa = PBXGroup;
 			children = (
-				3B372A6023565DC500AEFEE7 /* bulls-and-cows */,
-				3B372A5F23565DC500AEFEE7 /* Products */,
+				3B372A792356681F00AEFEE7 /* bulls-and-cows */,
+				3B372A782356681F00AEFEE7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3B372A5F23565DC500AEFEE7 /* Products */ = {
+		3B372A782356681F00AEFEE7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B372A5E23565DC500AEFEE7 /* bulls-and-cows */,
+				3B372A772356681F00AEFEE7 /* bulls-and-cows */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3B372A6023565DC500AEFEE7 /* bulls-and-cows */ = {
+		3B372A792356681F00AEFEE7 /* bulls-and-cows */ = {
 			isa = PBXGroup;
 			children = (
-				3B372A6123565DC500AEFEE7 /* bulls-and-cows.cpp */,
+				3B372A7A2356681F00AEFEE7 /* bulls-and-cows.cpp */,
 			);
 			path = "bulls-and-cows";
 			sourceTree = "<group>";
@@ -65,13 +65,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3B372A5D23565DC500AEFEE7 /* bulls-and-cows */ = {
+		3B372A762356681F00AEFEE7 /* bulls-and-cows */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B372A6523565DC500AEFEE7 /* Build configuration list for PBXNativeTarget "bulls-and-cows" */;
+			buildConfigurationList = 3B372A7E2356681F00AEFEE7 /* Build configuration list for PBXNativeTarget "bulls-and-cows" */;
 			buildPhases = (
-				3B372A5A23565DC500AEFEE7 /* Sources */,
-				3B372A5B23565DC500AEFEE7 /* Frameworks */,
-				3B372A5C23565DC500AEFEE7 /* CopyFiles */,
+				3B372A732356681F00AEFEE7 /* Sources */,
+				3B372A742356681F00AEFEE7 /* Frameworks */,
+				3B372A752356681F00AEFEE7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -79,24 +79,24 @@
 			);
 			name = "bulls-and-cows";
 			productName = "bulls-and-cows";
-			productReference = 3B372A5E23565DC500AEFEE7 /* bulls-and-cows */;
+			productReference = 3B372A772356681F00AEFEE7 /* bulls-and-cows */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3B372A5623565DC500AEFEE7 /* Project object */ = {
+		3B372A6F2356681F00AEFEE7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Sarah Carter";
 				TargetAttributes = {
-					3B372A5D23565DC500AEFEE7 = {
+					3B372A762356681F00AEFEE7 = {
 						CreatedOnToolsVersion = 11.1;
 					};
 				};
 			};
-			buildConfigurationList = 3B372A5923565DC500AEFEE7 /* Build configuration list for PBXProject "bulls-and-cows" */;
+			buildConfigurationList = 3B372A722356681F00AEFEE7 /* Build configuration list for PBXProject "bulls-and-cows" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -104,29 +104,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 3B372A5523565DC500AEFEE7;
-			productRefGroup = 3B372A5F23565DC500AEFEE7 /* Products */;
+			mainGroup = 3B372A6E2356681F00AEFEE7;
+			productRefGroup = 3B372A782356681F00AEFEE7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3B372A5D23565DC500AEFEE7 /* bulls-and-cows */,
+				3B372A762356681F00AEFEE7 /* bulls-and-cows */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3B372A5A23565DC500AEFEE7 /* Sources */ = {
+		3B372A732356681F00AEFEE7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B372A6223565DC500AEFEE7 /* bulls-and-cows.cpp in Sources */,
+				3B372A7B2356681F00AEFEE7 /* bulls-and-cows.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		3B372A6323565DC500AEFEE7 /* Debug */ = {
+		3B372A7C2356681F00AEFEE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -184,7 +184,7 @@
 			};
 			name = Debug;
 		};
-		3B372A6423565DC500AEFEE7 /* Release */ = {
+		3B372A7D2356681F00AEFEE7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -235,7 +235,7 @@
 			};
 			name = Release;
 		};
-		3B372A6623565DC500AEFEE7 /* Debug */ = {
+		3B372A7F2356681F00AEFEE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -245,7 +245,7 @@
 			};
 			name = Debug;
 		};
-		3B372A6723565DC500AEFEE7 /* Release */ = {
+		3B372A802356681F00AEFEE7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -258,25 +258,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3B372A5923565DC500AEFEE7 /* Build configuration list for PBXProject "bulls-and-cows" */ = {
+		3B372A722356681F00AEFEE7 /* Build configuration list for PBXProject "bulls-and-cows" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B372A6323565DC500AEFEE7 /* Debug */,
-				3B372A6423565DC500AEFEE7 /* Release */,
+				3B372A7C2356681F00AEFEE7 /* Debug */,
+				3B372A7D2356681F00AEFEE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B372A6523565DC500AEFEE7 /* Build configuration list for PBXNativeTarget "bulls-and-cows" */ = {
+		3B372A7E2356681F00AEFEE7 /* Build configuration list for PBXNativeTarget "bulls-and-cows" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B372A6623565DC500AEFEE7 /* Debug */,
-				3B372A6723565DC500AEFEE7 /* Release */,
+				3B372A7F2356681F00AEFEE7 /* Debug */,
+				3B372A802356681F00AEFEE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3B372A5623565DC500AEFEE7 /* Project object */;
+	rootObject = 3B372A6F2356681F00AEFEE7 /* Project object */;
 }

@@ -8,15 +8,8 @@
 
 #include <iostream>
 
-
-using std::string;
-
-
 int main(int argc, const char * argv[]) {
-    
-    string answer = "1234";
-    string guess;
-    
-    
+    // insert code here...
+    std::cout << "Hello, World!\n";
     return 0;
 }
