@@ -17,9 +17,8 @@ int main(int argc, const char * argv[]) {
     std::cout << "Please enter a string - it can contain spaces and numbers. Type \"end\" or \"End\" or \"END\" to finish your input: \n";
     do {
         std::getline(std::cin, str);
-        std::cout << str << std::endl;
-//        StringToTokensWS(str, tokens);
-    } while (ReadLine(str));
+        StringToTokensWS(str, tokens);
+    } while (Finish(str));
     
     std::cout << tokens.size();
     

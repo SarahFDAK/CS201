@@ -15,5 +15,6 @@
 bool ReadLine(std::string & str);
 unsigned StringToTokensWS(std::string & str, std::vector<std::string> & tokens);
 void AnalyzeTokens(const std::vector<std::string> & tokens);
+bool Finish(const std::string & str);
 
 #endif /* tokenizer_hpp */

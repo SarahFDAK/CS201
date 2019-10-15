@@ -26,10 +26,10 @@ unsigned StringToTokensWS(std::string & str, std::vector<std::string> & tokens){
 
     std::istringstream tok(str);
     std::string text;
-    tok >> text;
-    while(tok){
+    do {
+        tok >> text;
         tokens.push_back(text);
-    }
+    } while(tok);
 
     return int(tokens.size());
 }
