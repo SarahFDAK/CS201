@@ -42,7 +42,7 @@ int CountCows(const std::string & guess, const std::string & answer){
     int ccount = 0;
     for(int c = 0; c < answer.size(); c++){
         for(char g: guess){
-            if(g = answer[c]){
+            if(g == answer[c]){
                 ccount++;
             }
         }
