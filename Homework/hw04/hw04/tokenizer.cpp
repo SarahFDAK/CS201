@@ -12,6 +12,7 @@
 #include <string>
 #include <sstream>
 
+//This function checks to see if the user entered a blank line. If so, it returns false.
 bool ReadLine(std::string & str){
     
     if(str == ""){
@@ -21,7 +22,7 @@ bool ReadLine(std::string & str){
     return true;
 }
 
-
+//This function takes the strings from user input that are separated by whitespace and pushes them into the tokens vector. It returns the number of elements in the vector when completed.
 unsigned StringToTokensWS(std::string & str, std::vector<std::string> & tokens){
     
     std::istringstream token(str);
@@ -37,7 +38,7 @@ unsigned StringToTokensWS(std::string & str, std::vector<std::string> & tokens){
     return int(tokens.size());
 }
 
-
+//This function analyzes the tokens that were placed in the vector by StringToTokensWS to find their types. It then prints the type as well as the token for the user.
 void AnalyzeTokens(const std::vector<std::string> & tokens){
     for(auto token: tokens){
         if(token[0] <= '9' && token[0] >='0'){
@@ -58,7 +59,7 @@ void AnalyzeTokens(const std::vector<std::string> & tokens){
     }
 }
 
-
+//This function checks if the user has entered the program termination string.
 bool Finish(const std::string & str){
     if(str == "end" || str == "End" || str == "END"){
         return false;

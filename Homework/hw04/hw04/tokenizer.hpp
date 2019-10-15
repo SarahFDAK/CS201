@@ -12,6 +12,8 @@
 #include <stdio.h>
 #include <iostream>
 
+
+//Declare function prototypes
 bool ReadLine(std::string & str);
 unsigned StringToTokensWS(std::string & str, std::vector<std::string> & tokens);
 void AnalyzeTokens(const std::vector<std::string> & tokens);
