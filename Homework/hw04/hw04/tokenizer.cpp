@@ -33,6 +33,6 @@ unsigned StringToTokensWS(std::string & str, std::vector<std::string> & tokens){
 }
 
 
-void AnalyzeTokens(const std::vector<std::string> & tokens);{
+void AnalyzeTokens(const std::vector<std::string> & tokens){
     
 }
