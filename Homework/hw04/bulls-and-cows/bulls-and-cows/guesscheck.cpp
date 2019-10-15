@@ -15,3 +15,13 @@ bool CheckGuessLength(const std::string & guess){
     }
     return true;
 }
+
+
+bool CheckGuessType(const std::string & guess){
+    for(int i = 0; i < guess.size(); i++){
+        if(guess[i] < '0' || guess[i] > '9'){
+            return false;
+        }
+    }
+    return true;
+}
