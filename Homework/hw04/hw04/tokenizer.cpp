@@ -13,23 +13,24 @@
 #include <sstream>
 
 bool ReadLine(std::string & str){
+    
     if(str == ""){
         return false;
     }
+
     return true;
 }
 
 
 unsigned StringToTokensWS(std::string & str, std::vector<std::string> & tokens){
-    int TokCount = 0;
-    while(ReadLine(str)){
-        std::istringstream instream(str);
+    {
+        std::istringstream tok(str);
         std::string token;
-        instream >> token;
+        tok >> token;
         tokens.push_back(token);
-        TokCount ++;
+        std::cout << std::endl;
     }
-    return TokCount;
+    return int(tokens.size());
 }
 
 
