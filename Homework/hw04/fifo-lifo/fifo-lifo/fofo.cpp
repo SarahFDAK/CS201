@@ -18,3 +18,20 @@ using std::cout;
 void FifoPush(vector<string> & container, const string & item){
     container.push_back(item);
 }
+
+
+bool IsContainerEmpty(const vector<string> & container){
+    if(container.size()==0){
+        return true;
+    }
+    return false;
+}
+
+
+void PrintContainer(const vector<string> & container){
+    cout << "The entered items are: " << std::endl;
+    
+    for(string item: container){
+        cout<< item << std::endl;
+    }
+}
