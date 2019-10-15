@@ -23,13 +23,13 @@ bool ReadLine(std::string & str){
 
 
 unsigned StringToTokensWS(std::string & str, std::vector<std::string> & tokens){
-
-    std::istringstream tok(str);
+    
+    std::istringstream token(str);
     std::string text;
-    do {
-        tok >> text;
+
+    while(token >> text) {
         tokens.push_back(text);
-    } while(tok);
+    }
 
     return int(tokens.size());
 }

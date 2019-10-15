@@ -15,12 +15,12 @@ int main(int argc, const char * argv[]) {
     std::vector<std::string> tokens;
     
     std::cout << "Please enter a string - it can contain spaces and numbers. Type \"end\" or \"End\" or \"END\" to finish your input: \n";
-    do {
+    while (Finish(str)) {
         std::getline(std::cin, str);
         StringToTokensWS(str, tokens);
-    } while (Finish(str));
+    } 
     
-    std::cout << tokens.size();
+    std::cout << tokens.size() << std::endl;
     
     AnalyzeTokens(tokens);
     return 0;
