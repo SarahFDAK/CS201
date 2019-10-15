@@ -25,3 +25,15 @@ bool CheckGuessType(const std::string & guess){
     }
     return true;
 }
+
+
+int CountBulls(const std::string & guess, const std::string & answer){
+    int bcount = 0;
+    for(int b = 0; b < answer.size(); b++){
+        if(guess[b] == answer[b]){
+            bcount++;
+        }
+    }
+    return bcount;
+}
+
