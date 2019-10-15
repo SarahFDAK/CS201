@@ -7,8 +7,17 @@
 //
 
 #include <iostream>
+#include <vector>
+
+using std::vector;
+using std::string;
+using std::cout;
 
 int main(int argc, const char * argv[]) {
+    vector<string> container;
+    string item;
+    
+    
     
     return 0;
 }

@@ -8,4 +8,13 @@
 
 #include "fofo.hpp"
 #include <iostream>
+#include <vector>
 
+using std::vector;
+using std::string;
+using std::cout;
+
+
+void FifoPush(vector<string> & container, const string & item){
+    container.push_back(item);
+}
