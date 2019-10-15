@@ -18,12 +18,11 @@ int main(int argc, const char * argv[]) {
     do {
         std::getline(std::cin, str);
         StringToTokensWS(str, tokens);
-        for(int i = 0; i < tokens.size(); i++){
-            std::cout << tokens[i] << std::endl;
-        }
     } while (str != "end" || str != "End" || str != "END");
+    
     std::cout << tokens.size();
     
+    AnalyzeTokens(tokens);
     return 0;
 }
 
