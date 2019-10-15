@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <iostream>
 
+//Declare all function prototypes
 bool CheckGuessLength(const std::string & guess);
 bool CheckGuessType(const std::string & guess);
 int CountBulls(const std::string & guess, const std::string & answer);
