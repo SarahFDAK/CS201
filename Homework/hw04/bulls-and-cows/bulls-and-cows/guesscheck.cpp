@@ -7,3 +7,11 @@
 //
 
 #include "guesscheck.hpp"
+#include <iostream>
+
+bool CheckGuessLength(const std::string & guess){
+    if(guess.size() != 4){
+        return false;
+    }
+    return true;
+}
