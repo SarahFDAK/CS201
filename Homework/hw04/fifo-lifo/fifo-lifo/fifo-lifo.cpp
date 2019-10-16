@@ -16,7 +16,6 @@ using std::cout;
 using std::endl;
 
 int main(int argc, const char * argv[]) {
-    vector<string> start;
     vector<string> container;
     string item;
     
