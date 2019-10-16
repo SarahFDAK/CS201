@@ -24,6 +24,7 @@ void FifoPop(vector<string> & container, const string & item){
     container.pop_back();
 }
 
+
 void LifoPush(vector<string> & container, const string & item){
     container.push_back(item);
 }
