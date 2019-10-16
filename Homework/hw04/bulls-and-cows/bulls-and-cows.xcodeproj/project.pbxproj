@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B62D28623567E070077B871 /* cows-and-bulls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B62D28523567E070077B871 /* cows-and-bulls.cpp */; };
+		3B62D28623567E070077B871 /* bulls-and-cows.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B62D28523567E070077B871 /* bulls-and-cows.cpp */; };
 		3B62D28E23567EAA0077B871 /* guesscheck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B62D28C23567EAA0077B871 /* guesscheck.cpp */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +25,7 @@
 
 /* Begin PBXFileReference section */
 		3B62D28223567E060077B871 /* bulls-and-cows */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "bulls-and-cows"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B62D28523567E070077B871 /* cows-and-bulls.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "cows-and-bulls.cpp"; sourceTree = "<group>"; };
+		3B62D28523567E070077B871 /* bulls-and-cows.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "bulls-and-cows.cpp"; sourceTree = "<group>"; };
 		3B62D28C23567EAA0077B871 /* guesscheck.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = guesscheck.cpp; sourceTree = "<group>"; };
 		3B62D28D23567EAA0077B871 /* guesscheck.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = guesscheck.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,7 +60,7 @@
 		3B62D28423567E060077B871 /* bulls-and-cows */ = {
 			isa = PBXGroup;
 			children = (
-				3B62D28523567E070077B871 /* cows-and-bulls.cpp */,
+				3B62D28523567E070077B871 /* bulls-and-cows.cpp */,
 				3B62D28C23567EAA0077B871 /* guesscheck.cpp */,
 				3B62D28D23567EAA0077B871 /* guesscheck.hpp */,
 			);
@@ -125,7 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B62D28E23567EAA0077B871 /* guesscheck.cpp in Sources */,
-				3B62D28623567E070077B871 /* cows-and-bulls.cpp in Sources */,
+				3B62D28623567E070077B871 /* bulls-and-cows.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
