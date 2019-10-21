@@ -13,7 +13,7 @@
 int main(int argc, const char * argv[]) {
     for(int i = 0; i <= 180; i += 5){
         double radian = i * M_PI/180.00;
-        std::cout << std::setw(3) << i << " " << std::fixed <<std::setw(11) << std::setprecision(8)<< cos(radian) << std::endl;
+        std::cout << std::setw(3) << i << " " << std::scientific <<std::setw(11) << std::setprecision(8)<< cos(radian) << std::endl;
     }
     return 0;
 }
