@@ -2,6 +2,7 @@
 *.pch
 *.xcuserstate
 *.DS_Store
+*.pdf
 
 # Compiled Dynamic libraries
 *.so
