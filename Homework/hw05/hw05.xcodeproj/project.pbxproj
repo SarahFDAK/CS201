@@ -10,6 +10,7 @@
 		3B127B1E2366667800A155CD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B127B1D2366667800A155CD /* main.cpp */; };
 		3B127B262366668800A155CD /* libfltk.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B127B252366668700A155CD /* libfltk.1.3.dylib */; };
 		3B127B272366668800A155CD /* libfltk.1.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3B127B252366668700A155CD /* libfltk.1.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3B1D3633236667A600B704E4 /* truncstruct.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D3631236667A600B704E4 /* truncstruct.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,8 @@
 		3B127B1A2366667800A155CD /* hw05 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hw05; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B127B1D2366667800A155CD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3B127B252366668700A155CD /* libfltk.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfltk.1.3.dylib; path = ../../../../../usr/local/Cellar/fltk/1.3.5/lib/libfltk.1.3.dylib; sourceTree = "<group>"; };
+		3B1D3631236667A600B704E4 /* truncstruct.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = truncstruct.cpp; sourceTree = "<group>"; };
+		3B1D3632236667A600B704E4 /* truncstruct.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = truncstruct.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				3B127B1D2366667800A155CD /* main.cpp */,
+				3B1D3631236667A600B704E4 /* truncstruct.cpp */,
+				3B1D3632236667A600B704E4 /* truncstruct.hpp */,
 			);
 			path = hw05;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B127B1E2366667800A155CD /* main.cpp in Sources */,
+				3B1D3633236667A600B704E4 /* truncstruct.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
