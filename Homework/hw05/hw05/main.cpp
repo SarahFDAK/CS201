@@ -2,7 +2,12 @@
 #include <FL/Fl_Window.H>
 #include <FL/Fl_Box.H>
 #include <FL/Fl_Input.H>
+#include <FL/Fl_Output.H>
 #include <FL/Fl_Button.H>
+#include <iostream>
+#include <string>
+
+#include "truncstruct.hpp"
 
 void quit_cb(Fl_Widget* obj, void*){
     exit(0);
@@ -10,15 +15,15 @@ void quit_cb(Fl_Widget* obj, void*){
 
 int main(int argc, char **argv) {
     Fl_Window *window = new Fl_Window(340,180);
-//    Fl_Box *box = new Fl_Box(20,40,300,100,"Hello, World!");
-//    box->box(FL_UP_BOX);
-//    box->labelfont(FL_BOLD+FL_ITALIC);
-//    box->labelsize(36);
-//    box->labeltype(FL_SHADOW_LABEL);
+
+    std::string input;
+    size_t len;
     Fl_Input *entry = new Fl_Input(100, 10, 200, 30, "User Input");
-    entry->value();
+    input = entry->value();
     Fl_Input *size = new Fl_Input(100, 50, 100, 30, "# of chars" );
-    size->value();
+    len = size_t(size->value());
+    StringInfo userStuff { input, len };
+
     Fl_Button *quit = new Fl_Button(100,100,75,40, "Quit");
     quit->callback( (Fl_Callback*) quit_cb );
     window->end();
