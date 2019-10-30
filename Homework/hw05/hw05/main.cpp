@@ -52,19 +52,18 @@ void truncBut_cb(Fl_Widget *t, void *data){
 int main(int argc, char **argv) {
     Fl_Window *window = new Fl_Window(340,180);
 
-//    std::string input;
-//    size_t len;
-//    std::string output;
     window->begin();
+    
     entry = new Fl_Input(100, 10, 200, 30, "User Input");
-    entry->callback(entryChanged, nullptr);
     sizeInput = new Fl_Input(100, 50, 100, 30, "# of chars" );
-    sizeInput->callback(sizeInputChanged, nullptr);
     truncOutput = new Fl_Output(100, 90, 200, 30, "Output");
     truncate = new Fl_Button(85, 130, 75, 40, "Truncate");
     quit = new Fl_Button(185,130,75,40, "Quit");
+    
     window->end();
     
+    entry->callback(entryChanged, nullptr);
+    sizeInput->callback(sizeInputChanged, nullptr);
     truncate->callback(truncBut_cb, (void*)&userStuff);
     quit->callback( (Fl_Callback*) quit_cb );
 
