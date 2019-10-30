@@ -23,27 +23,30 @@ void quit_cb(Fl_Widget* obj, void*){
     exit(0);
 }
 
-void truncBut_cb(Fl_Widget *trunc, void *data){
-    
-    
-}
-
-
 void entryChanged(Fl_Widget *w, void *data)
 {
     Fl_Input *entry = (Fl_Input*)w;
-    std::string str = entry->value();
-    std::istringstream istr(str);
+    std::string entr = entry->value();
+    std::istringstream istr(entr);
     istr >> userStuff.str;
+
+    truncOutput->value(entr.c_str());
 }
 
 void sizeInputChanged(Fl_Widget *w, void *data)
 {
-    Fl_Input *input = (Fl_Input*)w;
-    std::string str = input->value();
+    Fl_Input *sizeInput = (Fl_Input*)w;
+    std::string str = sizeInput->value();
     std::istringstream istr(str);
     istr >> userStuff.len;
+    truncOutput->value(str.c_str());
+
 }
+
+void truncBut_cb(Fl_Widget *trunc, void *data){
+    
+}
+
 
 int main(int argc, char **argv) {
     Fl_Window *window = new Fl_Window(340,180);
@@ -53,6 +56,7 @@ int main(int argc, char **argv) {
 //    std::string output;
     window->begin();
     entry = new Fl_Input(100, 10, 200, 30, "User Input");
+    entry->callback(entryChanged, nullptr);
     sizeInput = new Fl_Input(100, 50, 100, 30, "# of chars" );
     sizeInput->callback(sizeInputChanged, nullptr);
     truncOutput = new Fl_Output(100, 90, 200, 30, "Output");
