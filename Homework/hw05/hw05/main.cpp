@@ -30,7 +30,6 @@ void entryChanged(Fl_Widget *w, void *data)
     std::istringstream istr(entr);
     istr >> userStuff.str;
 
-    truncOutput->value(entr.c_str());
 }
 
 void sizeInputChanged(Fl_Widget *w, void *data)
@@ -39,12 +38,14 @@ void sizeInputChanged(Fl_Widget *w, void *data)
     std::string str = sizeInput->value();
     std::istringstream istr(str);
     istr >> userStuff.len;
-    truncOutput->value(str.c_str());
 
 }
 
-void truncBut_cb(Fl_Widget *trunc, void *data){
-    
+void truncBut_cb(Fl_Widget *t, void *data){
+//    Fl_Button *truncate = (Fl_Button*)t;
+    StringInfo *userStuff = (StringInfo*)data;
+    std::string shrt = trunc(*userStuff).str;
+    truncOutput->value(shrt.c_str());
 }
 
 
@@ -64,7 +65,7 @@ int main(int argc, char **argv) {
     quit = new Fl_Button(185,130,75,40, "Quit");
     window->end();
     
-    //truncate->callback( truncBut_cb(truncate, userStuff)) ;
+    truncate->callback(truncBut_cb, (void*)&userStuff);
     quit->callback( (Fl_Callback*) quit_cb );
 
     window->show(argc, argv);
