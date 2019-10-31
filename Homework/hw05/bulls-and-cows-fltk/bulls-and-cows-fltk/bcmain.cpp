@@ -34,6 +34,13 @@ void guessInput_cb(Fl_Widget *g, void *data){
     istr >> userGuess;
 }
 
+void tryoutBut(Fl_Widget *t, void *data){
+    std::string *userGuess = (std::string*)data;
+    if(!CheckGuessType(*userGuess) | !CheckGuessLength(*userGuess)){
+        result->value("Please enter 4 numbers to guess.");
+    }
+}
+
 void exitProgram(Fl_Widget *q, void *data){
     exit(0);
 }
@@ -49,8 +56,9 @@ int main(int argc, const char * argv[]) {
     
     tryout = new Fl_Button(140, 200, 75, 40, "Guess");
     tryout->color(FL_CYAN);
+    tryout->callback(tryoutBut, (void*)&userGuess);
     
-    result = new Fl_Output(85, 125, 150, 30, "Result: ");
+    result = new Fl_Output(85, 125, 300, 30, "Result: ");
     
     quit = new Fl_Button(260, 200, 75, 40, "Exit");
     quit->color(FL_RED);
