@@ -20,7 +20,16 @@
 
 #include "guesscheck.hpp"
 
+std::string userGuess = "";
 Fl_Multiline_Output *instruct = nullptr;
+Fl_Input *guess = nullptr;
+
+void guessInput_cb(Fl_Widget *g, void *data){
+    Fl_Input *guess = (Fl_Input*)g;
+    std::string gs = guess->value();
+    std::istringstream istr(gs);
+    istr >> userGuess;
+}
 
 
 int main(int argc, const char * argv[]) {
