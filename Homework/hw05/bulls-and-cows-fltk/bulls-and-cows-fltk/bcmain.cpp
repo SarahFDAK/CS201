@@ -45,6 +45,7 @@ int main(int argc, const char * argv[]) {
     instruct = new Fl_Multiline_Output(85,10,400,75, "Instructions: ");
     instruct->value("Enter 4 numbers. The correct numbers in the correct location \nare counted as \"Bulls\" and correct numbers in the incorrect \nlocation are counted as \"Cows\". Get 4 bulls to win the game.");
     guess = new Fl_Input(85, 90, 50, 30, "Your guess: ");
+    guess->callback(guessInput_cb);
     
     tryout = new Fl_Button(140, 200, 75, 40, "Guess");
     tryout->color(FL_CYAN);
