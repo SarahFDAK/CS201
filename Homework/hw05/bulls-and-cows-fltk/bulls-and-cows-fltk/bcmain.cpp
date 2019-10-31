@@ -34,6 +34,9 @@ void guessInput_cb(Fl_Widget *g, void *data){
     istr >> userGuess;
 }
 
+void exitProgram(Fl_Widget *q, void *data){
+    exit(0);
+}
 
 int main(int argc, const char * argv[]) {
     Fl_Window *win = new Fl_Window(500, 300, "Bulls and Cows Game");
@@ -50,6 +53,7 @@ int main(int argc, const char * argv[]) {
     
     quit = new Fl_Button(260, 200, 75, 40, "Exit");
     quit->color(FL_RED);
+    quit->callback( exitProgram );
 
     win->end();
     win->show();
