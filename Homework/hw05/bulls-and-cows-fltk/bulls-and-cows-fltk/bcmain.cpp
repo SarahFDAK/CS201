@@ -44,10 +44,12 @@ int main(int argc, const char * argv[]) {
     guess = new Fl_Input(85, 90, 50, 30, "Your guess: ");
     
     tryout = new Fl_Button(140, 200, 75, 40, "Guess");
+    tryout->color(FL_CYAN);
     
     result = new Fl_Output(85, 125, 150, 30, "Result: ");
     
     quit = new Fl_Button(260, 200, 75, 40, "Exit");
+    quit->color(FL_RED);
 
     win->end();
     win->show();
