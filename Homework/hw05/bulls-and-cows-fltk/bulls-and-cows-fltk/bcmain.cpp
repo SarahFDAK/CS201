@@ -21,6 +21,7 @@
 #include "guesscheck.hpp"
 
 std::string userGuess = "";
+std::string answer = "2587";
 Fl_Multiline_Output *instruct = nullptr;
 Fl_Input *guess = nullptr;
 Fl_Output *result = nullptr;
@@ -37,8 +38,16 @@ void guessInput_cb(Fl_Widget *g, void *data){
 void tryoutBut(Fl_Widget *t, void *data){
     std::string *userGuess = (std::string*)data;
     if(!CheckGuessType(*userGuess) | !CheckGuessLength(*userGuess)){
-        result->value("Please enter 4 numbers to guess.");
+        Fl_Output *badguess = new Fl_Output(85, 160, 200, 30, "Error");
+        badguess->value("Please enter 4 numbers to guess.");
+        guess->value("");
+        result->value("");
     }
+    int bulls = CountBulls(*userGuess, answer);
+    int cows = CountCows(*userGuess, answer)-CountBulls(*userGuess, answer);
+    std::string resultText = std::to_string(bulls) + " Bulls and " + std::to_string(cows) + " Cows.";
+    result->value(resultText.c_str());
+    
 }
 
 void exitProgram(Fl_Widget *q, void *data){
