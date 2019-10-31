@@ -23,6 +23,7 @@
 std::string userGuess = "";
 Fl_Multiline_Output *instruct = nullptr;
 Fl_Input *guess = nullptr;
+Fl_Output *result = nullptr;
 
 void guessInput_cb(Fl_Widget *g, void *data){
     Fl_Input *guess = (Fl_Input*)g;
@@ -35,8 +36,12 @@ void guessInput_cb(Fl_Widget *g, void *data){
 int main(int argc, const char * argv[]) {
     Fl_Window *win = new Fl_Window(500, 300, "Bulls and Cows Game");
     win->begin();
-    instruct = new Fl_Multiline_Output(75,10,400,75, "Instructions");
+    
+    instruct = new Fl_Multiline_Output(85,10,400,75, "Instructions: ");
     instruct->value("Enter 4 numbers. The correct numbers in the correct location \nare counted as \"Bulls\" and correct numbers in the incorrect \nlocation are counted as \"Cows\". Get 4 bulls to win the game.");
+    guess = new Fl_Input(85, 90, 50, 30, "Your guess: ");
+    
+    result = new Fl_Output(85, 125, 150, 30, "Result: ");
 
     win->end();
     win->show();
