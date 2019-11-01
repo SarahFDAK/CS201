@@ -20,18 +20,12 @@ int main(int argc, const char * argv[]) {
     vector<int> vecThree { 5, 2, 7, 12, 23};
     
     auto it = mismatch(vecOne.begin(), vecOne.end(), vecTwo.begin());
-    if(it.first != vecOne.end()){
+    while(it.first != vecOne.end()){
         cout << *it.first << ", " << *it.second << endl;
+        *it.second = *it.first;
+        it = mismatch(vecOne.begin(), vecOne.end(), vecTwo.begin());
     }
-    else
-        cout << "The vectors match." << endl;
-    
-    auto it2 = mismatch(vecOne.begin(), vecOne.end(), vecThree.begin());
-    if(it2.first != vecOne.end()){
-        cout << *it2.first << ", " << *it2.second << endl;
-    }
-    else
-        cout << "The vectors match." << endl;
+    cout << "The vectors match." << endl;
     
     return 0;
 }
