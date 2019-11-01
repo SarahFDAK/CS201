@@ -48,7 +48,12 @@ void tryoutBut(Fl_Widget *t, void *data){
     int bulls = CountBulls(*userGuess, answer);
     int cows = CountCows(*userGuess, answer)-CountBulls(*userGuess, answer);
     std::string resultText = std::to_string(bulls) + " Bulls and " + std::to_string(cows) + " Cows.";
-    result->value(resultText.c_str());
+    //If guess is correct - pass congratulatory message
+    if(bulls == 4 && cows ==0){
+        result->value("4 Bulls and 0 Cows. Congratulations!!");
+    }
+    else
+        result->value(resultText.c_str());
 }
 
 //Callback that exits lets the user exit the program
