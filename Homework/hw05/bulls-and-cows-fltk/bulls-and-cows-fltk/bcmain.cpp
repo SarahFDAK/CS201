@@ -51,7 +51,7 @@ void tryoutBut(Fl_Widget *t, void *data){
     result->value(resultText.c_str());
 }
 
-//Callback that exits the program
+//Callback that exits lets the user exit the program
 void exitProgram(Fl_Widget *q, void *data){
     switch (fl_choice("Are you sure you want to quit?", fl_yes, fl_no, 0)){
         case 0: exit(0);
@@ -62,22 +62,31 @@ int main(int argc, const char * argv[]) {
     Fl_Window *win = new Fl_Window(500, 300, "Bulls and Cows Game");
     win->begin();
     
+    //Format GUI displays and create multiline instruction output
     instruct = new Fl_Multiline_Output(85,10,400,75, "Instructions: ");
     instruct->value("Enter 4 numbers. The correct numbers in the correct location \nare counted as \"Bulls\" and correct numbers in the incorrect \nlocation are counted as \"Cows\". Get 4 bulls to win the game.");
+    
     guess = new Fl_Input(85, 90, 50, 30, "Your guess: ");
-    guess->callback(guessInput_cb);
-    
+
     tryout = new Fl_Button(140, 200, 75, 40, "Guess");
+    //Set the "Guess" button's color to cyan
     tryout->color(FL_CYAN);
-    tryout->callback(tryoutBut, (void*)&userGuess);
-    
+
     result = new Fl_Output(85, 125, 300, 30, "Result: ");
     
     quit = new Fl_Button(260, 200, 75, 40, "Exit");
+    //Set the quit button's color to red
     quit->color(FL_RED);
-    quit->callback( exitProgram );
 
     win->end();
+    
+    //Run callback to receive the user's guess
+    guess->callback(guessInput_cb);
+    //Run tryout callback to check the user's guess and submit a result
+    tryout->callback(tryoutBut, (void*)&userGuess);
+    //Run the quit callback
+    quit->callback( exitProgram );
+    
     win->show();
     return Fl::run();
 }
