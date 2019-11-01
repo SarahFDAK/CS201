@@ -1,13 +1,14 @@
 //
 //  bcmain.cpp
 //  bulls-and-cows-fltk
-//
-//  Created by Sarah Carter on 10/30/19.
-//  Copyright © 2019 Sarah Carter. All rights reserved.
+//  Sarah Carter
+//  10/30/19.
+//  This program uses the fltk library to create a GUI for the previously designed bulls-and-cows program, taking user guess input and reporting the results to a separate window.
 //
 
 #include <FL/Fl.H>
 #include <FL/Fl_Window.H>
+#include <FL/fl_ask.H>
 #include <FL/Fl_Box.H>
 #include <FL/Fl_Input.H>
 #include <FL/Fl_Widget.H>
@@ -20,6 +21,7 @@
 
 #include "guesscheck.hpp"
 
+//Declare global variables; initialize game answer
 std::string userGuess = "";
 std::string answer = "2587";
 Fl_Multiline_Output *instruct = nullptr;
@@ -28,6 +30,8 @@ Fl_Output *result = nullptr;
 Fl_Button *tryout = nullptr;
 Fl_Button *quit = nullptr;
 
+
+//Callback that takes user's guess input and passes it to the userGuess string created above.
 void guessInput_cb(Fl_Widget *g, void *data){
     Fl_Input *guess = (Fl_Input*)g;
     std::string gs = guess->value();
@@ -35,23 +39,23 @@ void guessInput_cb(Fl_Widget *g, void *data){
     istr >> userGuess;
 }
 
+//Callback that checks if the guess is of the proper length and format of the guess; once it is correct, CountBulls and CountCows functions are called and cast to integers, then a string is concatenated reporting the result. This is passed to the output.
 void tryoutBut(Fl_Widget *t, void *data){
     std::string *userGuess = (std::string*)data;
     if(!CheckGuessType(*userGuess) | !CheckGuessLength(*userGuess)){
-        Fl_Output *badguess = new Fl_Output(85, 160, 200, 30, "Error");
-        badguess->value("Please enter 4 numbers to guess.");
-        guess->value("");
-        result->value("");
+        result->value("Please enter 4 numbers to guess.");
     }
     int bulls = CountBulls(*userGuess, answer);
     int cows = CountCows(*userGuess, answer)-CountBulls(*userGuess, answer);
     std::string resultText = std::to_string(bulls) + " Bulls and " + std::to_string(cows) + " Cows.";
     result->value(resultText.c_str());
-    
 }
 
+//Callback that exits the program
 void exitProgram(Fl_Widget *q, void *data){
-    exit(0);
+    switch (fl_choice("Are you sure you want to quit?", fl_yes, fl_no, 0)){
+        case 0: exit(0);
+    }
 }
 
 int main(int argc, const char * argv[]) {
