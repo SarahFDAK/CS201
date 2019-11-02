@@ -38,7 +38,6 @@ void entryChanged(Fl_Widget *w, void *data)
     std::string entr = entry->value();
     std::istringstream istr(entr);
     istr >> userStuff.str;
-
 }
 
 //Callback taht takes the user entry number and passes it to the len method of the StringInfo variable declared
