@@ -14,6 +14,7 @@
 #include <FL/Fl_Output.H>
 #include <FL/Fl_Button.H>
 #include <FL/Fl_Menu_Bar.H>
+#include <FL/Fl_Menu_Item.H>
 #include <string>
 #include <map>
 
@@ -26,9 +27,15 @@ struct View{
     Fl_Output* output = nullptr;
 };
 
+void Quit_CB(Fl_Widget* q, void* data){
+    exit(0);
+}
+
 Fl_Window* WindowCreate(){
     Fl_Window* win = new Fl_Window(600, 400);
-    Fl_Menu_Bar* menu = new Fl_Menu_Bar(10, 20, 560, 30);
+    Fl_Button* quit = new Fl_Button(500, 20, 60, 30, "Quit");
+    quit->color(FL_RED);
+    quit->callback(Quit_CB);
     return win;
 }
 
