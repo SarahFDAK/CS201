@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B86853C236BC7BE006F4894 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B86853B236BC7BE006F4894 /* main.cpp */; };
+		3B86853C236BC7BE006F4894 /* fltk-crud.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B86853B236BC7BE006F4894 /* fltk-crud.cpp */; };
 		3B868544236BC851006F4894 /* libfltk.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B868543236BC851006F4894 /* libfltk.1.3.dylib */; };
 		3B868545236BC851006F4894 /* libfltk.1.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3B868543236BC851006F4894 /* libfltk.1.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3B868549236BC8A1006F4894 /* crud.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B868547236BC8A1006F4894 /* crud.cpp */; };
@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		3B868538236BC7BE006F4894 /* crud */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = crud; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B86853B236BC7BE006F4894 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3B86853B236BC7BE006F4894 /* fltk-crud.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "fltk-crud.cpp"; sourceTree = "<group>"; };
 		3B868543236BC851006F4894 /* libfltk.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfltk.1.3.dylib; path = ../../../../../../usr/local/Cellar/fltk/1.3.5/lib/libfltk.1.3.dylib; sourceTree = "<group>"; };
 		3B868547236BC8A1006F4894 /* crud.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = crud.cpp; sourceTree = "<group>"; };
 		3B868548236BC8A1006F4894 /* crud.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = crud.hpp; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		3B86853A236BC7BE006F4894 /* crud */ = {
 			isa = PBXGroup;
 			children = (
-				3B86853B236BC7BE006F4894 /* main.cpp */,
+				3B86853B236BC7BE006F4894 /* fltk-crud.cpp */,
 				3B868547236BC8A1006F4894 /* crud.cpp */,
 				3B868548236BC8A1006F4894 /* crud.hpp */,
 			);
@@ -149,7 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B86853C236BC7BE006F4894 /* main.cpp in Sources */,
+				3B86853C236BC7BE006F4894 /* fltk-crud.cpp in Sources */,
 				3B868549236BC8A1006F4894 /* crud.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
