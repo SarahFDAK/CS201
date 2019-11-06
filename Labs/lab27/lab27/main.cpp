@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <random>
+#include <vector>
 
 using std::uniform_int_distribution;
 using std::random_device;
@@ -30,5 +31,24 @@ int main(int argc, const char * argv[]) {
         }
     }
     std::cout << heads << " heads, " << tails << " tails."<< std::endl;
+//    mt19937 gen2(1);
+//    for(int i = 0; i < 1000; i++){
+//        int headsTails = flip(gen2);
+//        if(headsTails == 1){
+//            heads++;
+//        }
+//        else{
+//            tails++;
+//        }
+//    }
+//    std::cout << heads << " heads, " << tails << " tails."<< std::endl;
+    std::vector<int> addl;
+    for(int v = 1; v <= 100; v++){
+        addl.push_back(v);
+    }
+    std::shuffle(addl.begin(), addl.end(), gen);
+    for(size_t n:addl){
+        std::cout << n << std::endl;
+    }
     return 0;
 }
