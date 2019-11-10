@@ -1,6 +1,6 @@
                                           
                                           
-                                          
+#include <stdlib.h>
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -14,6 +14,19 @@ using std::mt19937;
 using std::uniform_int_distribution;
 using std::normal_distribution;
 
+int CalculateMean(int first, int last){
+    std::vector<int> nums;
+    for(int c = first; c <= last; c++){
+        nums.push_back(c);
+    }
+    int ave = 0;
+    for(auto i: nums){
+        ave += i;
+    }
+    ave /= nums.size();
+    return ave;
+}
+
 int RandomBetweenU(int first, int last){
     random_device ru;
     mt19937 genu(ru());
@@ -24,22 +37,12 @@ int RandomBetweenU(int first, int last){
 int RandomBetweenN(int first, int last){
     random_device rn;
     mt19937 genn(rn());
-    std::vector<int> nums;
-    for(int c = first; c <= last; c++){
-        nums.push_back(c);
-    }
-    int ave = 0;
-    for(auto i: nums){
-        ave += i;
-    }
-    ave /= nums.size();
-    normal_distribution<> disn(ave, 2);
+    normal_distribution<> disn(CalculateMean(first, last), 2);
     return disn(genn);
 }
 
 int RandomBetween(int first, int last){
-    int r = rand();
-    return r;
+    return rand();
 }
 
 void PrintDistribution(const std::map<int,int> &numbers){
@@ -50,29 +53,20 @@ void PrintDistribution(const std::map<int,int> &numbers){
     std::cout << std::endl;
 }
 
-int main()
-{
-//    // Seed with a real random value, if available
-//    std::random_device r;
-//
-//    // Choose a random mean between 1 and 6
-//    std::default_random_engine e1(r());
-//    std::uniform_int_distribution<int> uniform_dist(1, 6);
-//    int mean = uniform_dist(e1);
-//    std::cout << "Randomly-chosen mean: " << mean << '\n';
-//
-//    // Generate a normal distribution around that mean
-//    std::seed_seq seed2{r(), r(), r(), r(), r(), r(), r(), r()};
-//    std::mt19937 e2(seed2);
-//    std::normal_distribution<> normal_dist(mean, 2);
-//
+int main(){
+    int first;
+    int last;
+    
+    std::cout << "Enter a starting and an ending number: \n";
+    std::cin >> first >> last;
+    
     std::map<int, int> hist;
     std::map<int, int> histu;
     std::map<int, int> histn;
     for (int n = 0; n < 10000; ++n) {
-        ++histn[std::round(RandomBetweenN(1, 6))];
-        ++histu[std::round(RandomBetweenU(1, 6))];
-        ++hist[std::round(RandomBetween(1, 6))];
+        ++histn[std::round(RandomBetweenN(first, last))];
+        ++histu[std::round(RandomBetweenU(first, last))];
+        ++hist[std::round(RandomBetween(first, last))];
     }
     
     std::cout << "Uniform Distribution" << ":\n";
