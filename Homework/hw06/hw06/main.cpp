@@ -8,9 +8,17 @@
 #include <random>
 #include <cmath>
  
+using std::random_device;
+using std::mt19937;
+using std::uniform_int_distribution;
+using std::normal_distribution;
 
 int RandomBetweenU(int first, int last){
-    
+    random_device ru;
+    mt19937 genu(ru());
+    uniform_int_distribution<int> disu(first,last);
+    int u = disu(genu);
+    return u;
 }
 
 int RandomBetweenN(int first, int last){
