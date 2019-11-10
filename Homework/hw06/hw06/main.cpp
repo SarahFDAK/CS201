@@ -8,6 +8,23 @@
 #include <random>
 #include <cmath>
  
+
+int RandomBetweenU(int first, int last){
+    
+}
+
+int RandomBetweenN(int first, int last){
+    
+}
+
+int RandomBetween(int first, int last){
+    
+}
+
+void PrintDistribution(const std::map<int,int> &numbers){
+    
+}
+
 int main()
 {
     // Seed with a real random value, if available
