@@ -7,6 +7,7 @@
 #include <map>
 #include <random>
 #include <cmath>
+#include <vector>
  
 using std::random_device;
 using std::mt19937;
@@ -17,16 +18,23 @@ int RandomBetweenU(int first, int last){
     random_device ru;
     mt19937 genu(ru());
     uniform_int_distribution<int> disu(first,last);
-    int u = disu(genu);
-    return u;
+    return disu(genu);
 }
 
 int RandomBetweenN(int first, int last){
     random_device rn;
     mt19937 genn(rn());
-    normal_distribution<> disn(first, last);
-    int n = disn(genn);
-    return n;
+    std::vector<int> nums;
+    for(int c = first; c <= last; c++){
+        nums.push_back(c);
+    }
+    int ave = 0;
+    for(auto i: nums){
+        ave += i;
+    }
+    ave /= nums.size();
+    normal_distribution<> disn(ave, 2);
+    return disn(genn);
 }
 
 int RandomBetween(int first, int last){
@@ -35,7 +43,11 @@ int RandomBetween(int first, int last){
 }
 
 void PrintDistribution(const std::map<int,int> &numbers){
-    
+    std::cout << "Normal distribution around " << mean << ":\n";
+    for (auto p : hist) {
+        std::cout << std::fixed << std::setprecision(1) << std::setw(2)
+                  << p.first << ' ' << std::string(p.second/200, '*') << '\n';
+    }
 }
 
 int main()
@@ -56,7 +68,7 @@ int main()
  
     std::map<int, int> hist;
     for (int n = 0; n < 10000; ++n) {
-        ++hist[std::round(normal_dist(e2))];
+        ++hist[std::round(RandomBetweenN(1, 6))];
     }
     std::cout << "Normal distribution around " << mean << ":\n";
     for (auto p : hist) {
