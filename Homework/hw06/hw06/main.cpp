@@ -22,7 +22,11 @@ int RandomBetweenU(int first, int last){
 }
 
 int RandomBetweenN(int first, int last){
-    
+    random_device rn;
+    mt19937 genn(rn());
+    normal_distribution<> disn(first, last);
+    int n = disn(genn);
+    return n;
 }
 
 int RandomBetween(int first, int last){
