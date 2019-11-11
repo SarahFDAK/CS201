@@ -91,20 +91,21 @@ void Game(const string &word){
         cout << "Your guess: \n";
         char guess;
         std::cin >> guess;
-        
+
         ++guesses[std::to_string(guess)];
         
-        auto iter = find_if(word.begin(), word.end(), [=](string word, char guess){
-            return word.find(guess);
-        });
-
+        auto iter = find_if(word.begin(), word.end(),
+                            [&](char guess){
+                return word.find(std::to_string(guess)); });
+        auto index = std::distance(word.begin(), iter);
+        
         if(iter == word.end()){
             cout << guess << " is not in the word." << "   "
             << losing.at(wrong) << endl;
             wrong++;
         }
         else{
-            break;
+            sln[index] = guess;
         }
         std::cin.ignore();
     }
