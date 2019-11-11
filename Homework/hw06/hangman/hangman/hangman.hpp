@@ -19,5 +19,6 @@ std::string wordChoice(const int &key);
 int keyChoice();
 //Fl_Window* CreateWindow();
 void Game(const std::string &word);
+bool checkGuess(const size_t &found);
 
 #endif /* hangman_hpp */

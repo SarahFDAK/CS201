@@ -11,6 +11,7 @@
 #include <vector>
 #include <FL/Fl_Window.H>
 #include <FL/Fl_Box.H>
+#include <algorithm>
 #include "hangman.hpp"
 
 using std::string;
@@ -59,31 +60,55 @@ void Game(const string &word){
     std::map<string, int> guesses;
     std::vector<string> sln{word.size(), "_"};
     
+    std::map<int, string> losing{
+        {0, "Head"},
+        {1, "Body"},
+        {2, "Left Arm"},
+        {3, "Right Arm"},
+        {4, "Left Leg"},
+        {5, "Right Leg"},
+        {6, "Left Hand"},
+        {7, "Right Hand"},
+        {8, "Left Foot"},
+        {9, "Right Foot"}
+    };
+    
     int wrong = 0;
-    string guess;
     
     while(wrong < 10){
         for(auto w:sln){
             cout << w;
         }
         cout << endl;
-        cout << "Guesses made: ";
+        cout << "Letters guessed: ";
         for(auto n:guesses){
-            cout << n.first;
+            cout << n.first << " ";
         }
+        cout << endl;
         cout << endl;
         
         cout << "Your guess: \n";
+        string guess;
         std::cin >> guess;
-        size_t found = word.find(guess);
+        
         ++guesses[guess];
-        while(found != string::npos){
-            sln[found] = guess;
-        }
-        if(found == string::npos){
-            cout << guess << " is not in the word." << endl;
+        
+        auto iter = find_if(word.begin(), word.end(), [&](size_t found)
+                            {found = word.find(guess);
+                             return found != string::npos;});
+        
+        if(iter == word.end()){
+            cout << guess << " is not in the word." << "   "
+            << losing.at(wrong) << endl;
             wrong++;
         }
+        else
+            sln[iter] = guess;
         std::cin.ignore();
     }
 }
+
+bool checkGuess(const size_t &found){
+    return found != string::npos;
+}
+
