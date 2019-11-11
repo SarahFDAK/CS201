@@ -12,8 +12,11 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
+#include <FL/Fl.H>
+#include <FL/Fl_Window.H>
 
 std::string wordChoice(const int &key);
 int keyChoice();
+Fl_Window* CreateWindow();
 
 #endif /* hangman_hpp */

@@ -11,6 +11,7 @@
 #include "hangman.hpp"
 
 int main(int argc, const char * argv[]) {
-
-    return 0;
+    Fl_Window* window = CreateWindow();
+    window->show();
+    return Fl::run();
 }

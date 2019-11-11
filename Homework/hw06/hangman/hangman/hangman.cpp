@@ -8,6 +8,8 @@
 
 #include <map>
 #include <random>
+#include <FL/Fl_Window.H>
+#include <FL/Fl_Box.H>
 #include "hangman.hpp"
 
 using std::string;
@@ -38,3 +40,13 @@ int keyChoice(){
     return d(gen);
 }
 
+Fl_Window* CreateWindow(){
+    Fl_Window* win = new Fl_Window(600, 450);
+    win->begin();
+    
+    Fl_Box* header = new Fl_Box(10, 10, 580, 50, "Hangman");
+    header->box(FL_UP_BOX);
+    
+    win->end();
+    return win;
+}
