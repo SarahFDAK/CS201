@@ -7,10 +7,13 @@
 //
 
 #include <map>
+#include <random>
 #include "hangman.hpp"
 
 using std::string;
-
+using std::uniform_int_distribution;
+using std::mt19937;
+using std::random_device;
 
 string wordChoice(const int &key){
     std::map<int, string> word{
@@ -27,3 +30,11 @@ string wordChoice(const int &key){
     };
     return word.at(key);
 }
+
+int keyChoice(){
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<int> d(1, 10);
+    return d(gen);
+}
+

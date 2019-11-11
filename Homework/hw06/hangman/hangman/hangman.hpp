@@ -14,5 +14,6 @@
 #include <string>
 
 std::string wordChoice(const int &key);
+int keyChoice();
 
 #endif /* hangman_hpp */
