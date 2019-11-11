@@ -10,5 +10,9 @@
 #define hangman_hpp
 
 #include <stdio.h>
+#include <iostream>
+#include <string>
+
+std::string wordChoice(const int &key);
 
 #endif /* hangman_hpp */
