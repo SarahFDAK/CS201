@@ -12,13 +12,10 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
-#include <FL/Fl.H>
-#include <FL/Fl_Window.H>
 
 std::string wordChoice(const int &key);
 int keyChoice();
-//Fl_Window* CreateWindow();
 void Game(const std::string &word);
-bool checkGuess(const size_t &found);
+std::string assignVector(std::string &sln, const char &guess);
 
 #endif /* hangman_hpp */

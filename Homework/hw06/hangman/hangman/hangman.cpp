@@ -10,8 +10,6 @@
 #include <string>
 #include <random>
 #include <vector>
-#include <FL/Fl_Window.H>
-#include <FL/Fl_Box.H>
 #include <algorithm>
 #include "hangman.hpp"
 
@@ -45,21 +43,11 @@ int keyChoice(){
     return d(gen);
 }
 
-//Fl_Window* CreateWindow(){
-//    Fl_Window* win = new Fl_Window(600, 450);
-//    win->begin();
-//    
-//    Fl_Box* header = new Fl_Box(250, 10, 100, 50, "Hangman");
-//    header->box(FL_UP_BOX);
-//    header->labelsize(18);
-//    
-//    win->end();
-//    return win;
-//}
 
 void Game(const string &word){
-    std::map<string, int> guesses;
-    std::vector<string> sln{word.size(), "_"};
+    std::map<char, int> guesses;
+    string sln(word.size(), '_');
+    string correct;
     
     std::map<int, string> losing{
         {0, "Head"},
@@ -76,7 +64,7 @@ void Game(const string &word){
     
     int wrong = 0;
     
-    while(wrong < 10){
+    do{
         for(auto w:sln){
             cout << w;
         }
@@ -92,11 +80,9 @@ void Game(const string &word){
         char guess;
         std::cin >> guess;
 
-        ++guesses[std::to_string(guess)];
+        ++guesses[guess];
         
-        auto iter = find_if(word.begin(), word.end(),
-                            [&](char guess){
-                return word.find(std::to_string(guess)); });
+        auto iter = find(word.begin(), word.end(), guess);
         auto index = std::distance(word.begin(), iter);
         
         if(iter == word.end()){
@@ -106,12 +92,18 @@ void Game(const string &word){
         }
         else{
             sln[index] = guess;
+            correct = sln;
         }
         std::cin.ignore();
+        
+    }while(wrong < 10 || correct != word);
+
+    if(wrong == 10){
+        cout << "Sorry, you lose!" << endl;
     }
+    else
+        cout << "Congratulations! The word is " << word << "!" << endl;
 }
 
-//bool checkGuess(const auto &iter, const std::map<int, string> &losing){
-//    return ;
-//}
+
 
