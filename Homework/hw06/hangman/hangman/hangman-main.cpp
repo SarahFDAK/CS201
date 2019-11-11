@@ -11,7 +11,7 @@
 #include "hangman.hpp"
 
 int main(int argc, const char * argv[]) {
-    Fl_Window* window = CreateWindow();
-    window->show();
-    return Fl::run();
+    Game(wordChoice(keyChoice()));
+    
+    return 0;
 }
