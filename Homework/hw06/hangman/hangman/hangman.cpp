@@ -7,6 +7,7 @@
 //
 
 #include <map>
+#include <string>
 #include <random>
 #include <vector>
 #include <FL/Fl_Window.H>
@@ -88,27 +89,28 @@ void Game(const string &word){
         cout << endl;
         
         cout << "Your guess: \n";
-        string guess;
+        char guess;
         std::cin >> guess;
         
-        ++guesses[guess];
+        ++guesses[std::to_string(guess)];
         
-        auto iter = find_if(word.begin(), word.end(), [&](size_t found)
-                            {found = word.find(guess);
-                             return found != string::npos;});
-        
+        auto iter = find_if(word.begin(), word.end(), [=](string word, char guess){
+            return word.find(guess);
+        });
+
         if(iter == word.end()){
             cout << guess << " is not in the word." << "   "
             << losing.at(wrong) << endl;
             wrong++;
         }
-        else
-            sln[iter] = guess;
+        else{
+            break;
+        }
         std::cin.ignore();
     }
 }
 
-bool checkGuess(const size_t &found){
-    return found != string::npos;
-}
+//bool checkGuess(const auto &iter, const std::map<int, string> &losing){
+//    return ;
+//}
 
