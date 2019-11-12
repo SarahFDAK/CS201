@@ -83,35 +83,37 @@ void Game(const string &word){
         ++guesses[guess];
         
         int guessNo = std::count(word.begin(), word.end(), guess);
-        auto iter = find(word.begin(), word.end(), guess);
-        auto index = std::distance(word.begin(), iter);
+        auto iter = word.find(guess);
         
-        if(iter == word.end()){
+        if(guessNo == 0){
             cout << guess << " is not in the word." << "   "
             << losing.at(wrong) << endl;
             wrong++;
         }
         else if(guessNo > 1){
-            for(int i = guessNo; i >0; i--){
-                sln[index] = guess;
+            for(int i = 0; i < word.size(); i++){
+                if(word[i] == guess){
+                    sln[i] = guess;
+                }
                 correct = sln;
-                cout << correct << endl;
             }
         }
         else{
-            sln[index] = guess;
+            sln[iter] = guess;
             correct = sln;
-            cout << correct << endl;
         }
         std::cin.ignore();
         
     }while(wrong < 10 && correct != word);
 
     if(wrong == 10){
-        cout << "Sorry, you lose! The word was " << word << endl;
+        cout << "\n\n\n";
+        cout << "Sorry, you lose! The word was " << word << "\n\n" <<endl;
     }
-    else
-        cout << "Congratulations! The word is " << word << "!" << endl;
+    else{
+        cout << "\n\n\n";
+        cout << "Congratulations! The word is " << word << "!\n\n" << endl;
+    }
 }
 
 
