@@ -10,6 +10,7 @@
 #include <string>
 #include <random>
 #include <vector>
+#include <iterator>
 #include <algorithm>
 #include "hangman.hpp"
 
@@ -43,11 +44,13 @@ int keyChoice(){
     return d(gen);
 }
 
+bool predicate(string word, char guess){
+    return word.find(guess) != std::string::npos;
+}
 
 void Game(const string &word){
     std::map<char, int> guesses;
     string sln(word.size(), '_');
-    string correct;
     
     std::map<int, string> losing{
         {0, "Head"},
@@ -65,16 +68,7 @@ void Game(const string &word){
     int wrong = 0;
     
     do{
-        for(auto w:sln){
-            cout << w;
-        }
-        cout << endl;
-        cout << "Letters guessed: ";
-        for(auto n:guesses){
-            cout << n.first << " ";
-        }
-        cout << endl;
-        cout << endl;
+        cout << sln << "\n\n";
         
         cout << "Your guess: \n";
         char guess;
@@ -82,29 +76,31 @@ void Game(const string &word){
 
         ++guesses[guess];
         
-        int guessNo = std::count(word.begin(), word.end(), guess);
-        auto iter = word.find(guess);
+        cout << "Letters guessed: ";
+        for(auto n:guesses){
+            cout << n.first << " ";
+        }
+        cout << "\n\n";
         
+        int guessNo = std::count(word.begin(), word.end(), guess);
+    
         if(guessNo == 0){
             cout << guess << " is not in the word." << "   "
             << losing.at(wrong) << endl;
             wrong++;
         }
-        else if(guessNo > 1){
-            for(int i = 0; i < word.size(); i++){
-                if(word[i] == guess){
-                    sln[i] = guess;
-                }
-                correct = sln;
-            }
-        }
         else{
-            sln[iter] = guess;
-            correct = sln;
+            std::transform(word.begin(), word.end(), sln.begin(), sln.begin(), [&](char i, char j){
+                if(i == guess){
+                    return guess;
+                }
+                return j;
+            });
         }
+        
         std::cin.ignore();
         
-    }while(wrong < 10 && correct != word);
+    }while(wrong < 10 && sln != word);
 
     if(wrong == 10){
         cout << "\n\n\n";
