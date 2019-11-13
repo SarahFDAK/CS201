@@ -12,10 +12,11 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
+#include <map>
 
-std::string wordChoice(const int &key);
-int keyChoice();
-void Game(const std::string &word);
+std::string SelectWord(std::map<int, std::string> & word, const int &key);
+int SelectRandomKey(std::map<int, std::string> &word);
+void Game();
 std::string assignVector(std::string &sln, const char &guess);
 
 #endif /* hangman_hpp */
