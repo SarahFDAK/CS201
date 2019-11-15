@@ -14,18 +14,16 @@
 using std::string;
 using std::map;
 
-struct prod{
+struct product{
     double price;
     int units;
+    string color;
 };
 
 int main(int argc, const char * argv[]) {
-    prod exman;
-    exman.price = 215.00;
-    exman.units = 1;
-    map<string, prod> items = {
-        {"Exhaust manifold", exman},
-    };
+    product tshirt = { 2.15, 1, "red" };
+
+
     
     return 0;
 }

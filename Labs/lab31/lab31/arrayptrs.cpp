@@ -44,8 +44,8 @@ void printPointerStuff(int * ip1, int * ip2) {
 	//       HINT: save it with parentheses in a string.
 
     // **********************************************************************
-    while(ip1 < ip2){
-        for(int j = 0; j < 10; j++){
+    while(ip1 <= ip2){
+        for(int j = 0; j < 10 && j < (dist); j++){
             if(ip1 == middle){
                 cout << "(" << *ip1 << ")";
             }
