@@ -11,11 +11,15 @@
 
 #include <stdio.h>
 #include <string>
+#include <map>
 
 struct product{
     double price;
     int units;
     std::string unittype;
 };
+
+std::map<std::string, product> inventory;
+double Selection(const product &product, const int &units);
 
 #endif /* shopping_hpp */
