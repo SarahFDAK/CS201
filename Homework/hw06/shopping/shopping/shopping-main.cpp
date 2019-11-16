@@ -7,12 +7,35 @@
 //
 
 #include <iostream>
+#include <algorithm>
+#include <map>
 #include <iomanip>
 
 #include "shopping.hpp"
 
 using std::string;
 using std::map;
+
+struct product{
+    double price;
+    int units;
+    std::string unittype;
+};
+
+int units = 1;
+product butter{4.00, units, "pound"};
+product bread{5.00, units, "loaf"};
+product milk{3.50, units, "half gallon"};
+product avocado{2.50, units, "each"};
+product burger{1.57, units, "pound"};
+
+std::map<std::string, product> inventory{
+    {"Butter", butter},
+    {"Bread", bread},
+    {"Milk", milk},
+    {"Avocado", avocado},
+    {"Ground Beef", burger}
+};
 
 int main(int argc, const char * argv[]) {
 

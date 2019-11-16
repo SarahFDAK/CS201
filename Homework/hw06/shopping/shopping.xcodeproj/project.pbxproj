@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3B04A503237A76D200F34C1D /* shopping-main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B04A502237A76D200F34C1D /* shopping-main.cpp */; };
-		3B2C99472380A3B200FFA607 /* shopping.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C99452380A3B200FFA607 /* shopping.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +25,6 @@
 /* Begin PBXFileReference section */
 		3B04A4FF237A76D200F34C1D /* shopping */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = shopping; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B04A502237A76D200F34C1D /* shopping-main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "shopping-main.cpp"; sourceTree = "<group>"; };
-		3B2C99452380A3B200FFA607 /* shopping.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shopping.cpp; sourceTree = "<group>"; };
-		3B2C99462380A3B200FFA607 /* shopping.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shopping.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				3B04A502237A76D200F34C1D /* shopping-main.cpp */,
-				3B2C99452380A3B200FFA607 /* shopping.cpp */,
-				3B2C99462380A3B200FFA607 /* shopping.hpp */,
 			);
 			path = shopping;
 			sourceTree = "<group>";
@@ -125,7 +120,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B04A503237A76D200F34C1D /* shopping-main.cpp in Sources */,
-				3B2C99472380A3B200FFA607 /* shopping.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
