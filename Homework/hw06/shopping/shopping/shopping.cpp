@@ -1,29 +1,31 @@
 //
-//  main.cpp
+//  shopping.cpp
 //  shopping
 //
-//  Created by Sarah Carter on 11/11/19.
+//  Created by Sarah Carter on 11/16/19.
 //  Copyright © 2019 Sarah Carter. All rights reserved.
 //
 
-#include <iostream>
-#include <string>
 #include <map>
-#include <algorithm>
 
-using std::string;
-using std::map;
+#include "shopping.hpp"
 
-struct product{
-    double price;
-    int units;
-    string color;
+int units = 1;
+product butter{4.00, units, "pound"};
+product bread{5.00, units, "loaf"};
+product milk{3.50, units, "half gallon"};
+product avocado{2.50, units, "each"};
+product burger{1.57, units, "pound"};
+
+std::map<std::string, product> inventory{
+    {"Butter", butter},
+    {"Bread", bread},
+    {"Milk", milk},
+    {"Avocado", avocado},
+    {"Ground Beef", burger}
 };
 
-int main(int argc, const char * argv[]) {
-    product tshirt = { 2.15, 1, "red" };
-
-
-    
-    return 0;
+double Selection(const product &product, const int &units){
+    auto totalcost = product.price * units;
+    return totalcost;
 }
