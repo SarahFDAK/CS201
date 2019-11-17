@@ -11,6 +11,7 @@
 #include <algorithm>
 #include <map>
 #include <iomanip>
+#include <sstream>
 
 using std::string;
 using std::map;
@@ -28,10 +29,10 @@ double SelectionCost(const product &prod, const int &unitnum){
 
 int main(int argc, const char * argv[]) {
     map<std::string, product> inventory{
-        {"Butter", {4.00, 0, "pound"}},
-        {"Bread", {5.00, 0, "loaf"}},
+        {"Butter", {3.00, 0, "pound"}},
+        {"Bread", {3.29, 0, "loaf"}},
         {"Milk", {3.50, 0, "half gallon"}},
-        {"Avocado", {2.50, 0, "each"}},
+        {"Avocado", {2.50, 0, "avocado"}},
         {"Ground Beef", {1.57, 0, "pound"}}
     };
     
@@ -39,16 +40,19 @@ int main(int argc, const char * argv[]) {
     int itemcount;
 
     std::cout << "Which item do you want to buy? " << std::endl;
-    std::cin >> item;
-    while(item != "Done"){
-        for(auto p: inventory){
-            if(item == p.first){
-                std::cout << "Enter how many you want: " << std::endl;
-                std::cin >> itemcount;
-                std::cin.ignore();
+    std::getline(std::cin, item);
+    for(auto p: inventory){
+        if(item == p.first){
+            if(item == "Bread"){
+                std::cout << "Enter how many loaves you want: " << std::endl;
             }
+            else
+                std::cout << "Enter how many " << (p.second).unittype << "s you want: " << std::endl;
+            std::cin >> itemcount;
+            std::cin.ignore();
         }
     }
+    
       
     for(auto it: inventory){
         std::cout << std::setw(12) << it.first << ": $" << std:: fixed
