@@ -21,37 +21,32 @@ struct product{
     std::string unittype;
 };
 
-int units = 1;
-product butter{4.00, units, "pound"};
-product bread{5.00, units, "loaf"};
-product milk{3.50, units, "half gallon"};
-product avocado{2.50, units, "each"};
-product burger{1.57, units, "pound"};
-
-map<std::string, product> inventory{
-    {"Butter", butter},
-    {"Bread", bread},
-    {"Milk", milk},
-    {"Avocado", avocado},
-    {"Ground Beef", burger}
-};
-
 double SelectionCost(const product &prod, const int &unitnum){
     double totalcost = prod.price * unitnum;
     return totalcost;
 }
 
 int main(int argc, const char * argv[]) {
+    map<std::string, product> inventory{
+        {"Butter", {4.00, 0, "pound"}},
+        {"Bread", {5.00, 0, "loaf"}},
+        {"Milk", {3.50, 0, "half gallon"}},
+        {"Avocado", {2.50, 0, "each"}},
+        {"Ground Beef", {1.57, 0, "pound"}}
+    };
     
     string item;
-    std::cin >> item;
     int itemcount;
-    
-    for(auto p: inventory){
-        if(item == p.first){
-            std::cout << "Enter how many you want: " << std::endl;
-            std::cin >> itemcount;
-            std::cin.ignore();
+
+    std::cout << "Which item do you want to buy? " << std::endl;
+    std::cin >> item;
+    while(item != "Done"){
+        for(auto p: inventory){
+            if(item == p.first){
+                std::cout << "Enter how many you want: " << std::endl;
+                std::cin >> itemcount;
+                std::cin.ignore();
+            }
         }
     }
       
