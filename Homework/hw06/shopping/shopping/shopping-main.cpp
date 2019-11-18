@@ -53,7 +53,12 @@ int main(int argc, const char * argv[]) {
             
             for(auto p: inventory){
                 //Make sure the entered item is one of the options.
-                if(item == p.first){
+                if(item != p.first){
+                    std::cout << "That is not one of the products offered.\n"
+                    << std::endl;
+                    break;
+                }
+                else{
                     //Create a new entry in the shopping cart and get quantity
                     cart[item] = inventory[item];
                     //If-else selection for proper pluralization of unittypes
@@ -63,15 +68,12 @@ int main(int argc, const char * argv[]) {
                     else
                         std::cout << "Enter how many " << (p.second).unittype << "s you want: " << std::endl;
                 }
-                else{
-                    std::cout << "That is not one of the products offered.\n"
-                    << std::endl;
-                    continue;
-                }
+
                 //Update the cart with the desired unit quantity
                 std::cin >> itemcount;
                 (cart[item]).units = itemcount;
                 std::cin.ignore();
+                break;
             }
         }
         
@@ -108,6 +110,8 @@ int main(int argc, const char * argv[]) {
             }
             //Update item quantity
             cart[item].units = itemcount;
+            //Print the cart again to show the change.
+            PrintCart(cart);
         }
         
         //User wants to delete an item
