@@ -10,22 +10,16 @@
 #include <string>
 #include <algorithm>
 #include <map>
+#include <cctype>
+#include <vector>
 #include <iomanip>
 #include <sstream>
+
+#include "shopping.hpp"
 
 using std::string;
 using std::map;
 
-struct product{
-    double price;
-    int units;
-    std::string unittype;
-};
-
-double SelectionCost(const product &prod, const int &unitnum){
-    double totalcost = prod.price * unitnum;
-    return totalcost;
-}
 
 int main(int argc, const char * argv[]) {
     map<std::string, product> inventory{
@@ -36,32 +30,47 @@ int main(int argc, const char * argv[]) {
         {"Ground Beef", {1.57, 0, "pound"}}
     };
     
+    char input;
     string item;
     int itemcount;
-
-    std::cout << "Which item do you want to buy? " << std::endl;
-    std::getline(std::cin, item);
-    for(auto p: inventory){
-        if(item == p.first){
-            if(item == "Bread"){
-                std::cout << "Enter how many loaves you want: " << std::endl;
-            }
-            else
-                std::cout << "Enter how many " << (p.second).unittype << "s you want: " << std::endl;
-            std::cin >> itemcount;
+    std::map<string,product> cart;
+    
+    while(true){
+        std::cout << "Enter \"S\" to select purchases, \"V\" to view your cart, "
+        "\"D\" to delete an item in your cart, or \"E\" to finish." << std::endl;
+        std::cin >> input;
+        
+        if(std::toupper(input) == 'S'){
             std::cin.ignore();
+            PrintProducts(inventory);
+            std::cout << "\nWhich product would you like? " << std::endl;
+            std::getline(std::cin, item);
+            
+            for(auto p: inventory){
+                if(item == p.first){
+                    cart[item] = inventory[item];
+                    if(item == "Bread"){
+                        std::cout << "Enter how many loaves you want: " << std::endl;
+                        }
+                    else
+                        std::cout << "Enter how many " << (p.second).unittype << "s you want: " << std::endl;
+                std::cin >> itemcount;
+                (cart[item]).units = itemcount;
+                std::cin.ignore();
+                }
+            }
         }
+        else if(std::toupper(input) == 'V'){
+            PrintCart(cart);
+        }
+        else if(std::toupper(input) == 'D'){
+            
+        }
+        else break;
     }
     
-      
-    for(auto it: inventory){
-        std::cout << std::setw(12) << it.first << ": $" << std:: fixed
-        <<std::setprecision(2) << (it.second).price << "/" <<
-        (it.second).unittype << std::endl;
-    }
-    
-    double TotalCost = SelectionCost(inventory[item], itemcount);
-    std::cout << TotalCost << std::endl;
+//    double TotalCost = SelectionCost(inventory[item], itemcount);
+//    std::cout << TotalCost << std::endl;
 
     return 0;
 }
