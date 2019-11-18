@@ -26,8 +26,8 @@ int main(int argc, const char * argv[]) {
         {"Butter", {3.00, 0, "pound"}},
         {"Bread", {3.29, 0, "loaf"}},
         {"Milk", {3.50, 0, "half gallon"}},
-        {"Avocado", {2.50, 0, "avocado"}},
-        {"Ground Beef", {1.57, 0, "pound"}}
+        {"Produce", {2.50, 0, "item"}},
+        {"Meat", {1.57, 0, "pound"}}
     };
     
     char input;
@@ -37,7 +37,8 @@ int main(int argc, const char * argv[]) {
     
     while(true){
         std::cout << "Enter \"S\" to select purchases, \"V\" to view your cart, "
-        "\"D\" to delete an item in your cart, or \"E\" to finish." << std::endl;
+        "\E\" to edit an item, \"D\" to delete an item in your cart, "
+        "or \"C\" to exit." << std::endl;
         std::cin >> input;
         
         if(std::toupper(input) == 'S'){
@@ -63,8 +64,37 @@ int main(int argc, const char * argv[]) {
         else if(std::toupper(input) == 'V'){
             PrintCart(cart);
         }
+        else if(std::toupper(input) == 'E'){
+            std::cin.ignore();
+            if(cart.empty()){
+                std::cout << "You have nothing in your cart.\n" << std::endl;
+                continue;
+            }
+
+            string edit;
+            PrintCart(cart);
+            std::cout << "Enter the item you want to edit and the new quantity: "
+            << std::endl;
+            std::getline(std::cin, edit);
+            std::istringstream istr(edit);
+            istr >> item >> itemcount;
+            cart[item].units = itemcount;
+        }
         else if(std::toupper(input) == 'D'){
-            
+            std::cin.ignore();
+            if(cart.empty()){
+                std::cout << "You have nothing in your cart.\n" << std::endl;
+                continue;
+            }
+            string remove;
+            std::cout << "Which item do you want to remove? " << std::endl;
+            std::getline(std::cin, remove);
+            if(cart.count(remove) == 0){
+                std::cout << "You don't have any of that item in your cart.\n"
+                << std::endl;
+                continue;
+            }
+            cart.erase(remove);
         }
         else break;
     }

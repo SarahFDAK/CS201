@@ -36,7 +36,7 @@ void PrintCart(const map<string, product> &cart){
         << "   Total: $" << std::fixed << std::setprecision(2)
         << (s.price * s.units) << endl;
     }
-    cout << "Cart Total: $" << ShoppingCart(cart) << endl;
+    cout << "Cart Total: $" << ShoppingCart(cart) << "\n" << endl;
 }
 
 bool ItemIsProduct(const string &item, const map<string,product> &inventory){
