@@ -16,15 +16,19 @@
 using std::string;
 using std::map;
 
+//Create a new type called product
 struct product{
     double price;
     int units;
     std::string unittype;
 };
 
+//declare function prototypes
 void PrintProducts(const map<string, product> &inventory);
 void PrintCart(const map<string, product> &cart);
 bool ItemIsProduct(const string &item, const map<string,product>
                    &inventory);
 double ShoppingCart(const map<string, product> &cart);
+bool EmptyCart(const map<string, product> &cart);
+
 #endif /* shopping_hpp */
