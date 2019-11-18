@@ -37,7 +37,7 @@ int main(int argc, const char * argv[]) {
     //Keep the loop going until user enters the character to exit.
     while(true){
         std::cout << "Enter \"S\" to select purchases, \"V\" to view your cart, "
-        "\E\" to edit an item, \"D\" to delete an item in your cart, "
+        "\"E\" to edit an item, \"D\" to delete an item in your cart, "
         "or any other letter to exit." << std::endl;
         std::cin >> input;
         
