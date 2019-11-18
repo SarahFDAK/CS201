@@ -28,7 +28,8 @@ int main(int argc, const char * argv[]) {
         {"Meat", {1.57, 0, "pound"}}
     };
     
-    //Initialize user input char, item, itemcount, and the map to hold the shopping cart.
+    //Initialize user input char, item, itemcount, and the map to hold the
+    //shopping cart.
     char input;
     string item;
     int itemcount;
@@ -61,10 +62,12 @@ int main(int argc, const char * argv[]) {
                     cart[item] = inventory[item];
                     //If-else selection for proper pluralization of unittypes
                     if(item == "Bread"){
-                        std::cout << "Enter how many loaves you want: " << std::endl;
+                        std::cout << "Enter how many loaves you want: "
+                        << std::endl;
                         }
                     else{
-                        std::cout << "Enter how many " << (p.second).unittype << "s you want: " << std::endl;
+                        std::cout << "Enter how many " << (p.second).unittype
+                        << "s you want: " << std::endl;
                     }
                     //Update the cart with the desired unit quantity
                     std::cin >> itemcount;
