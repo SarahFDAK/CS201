@@ -133,6 +133,8 @@ int main(int argc, const char * argv[]) {
             }
             //Remove desired item
             cart.erase(remove);
+            //Reprint cart to show deletion
+            PrintCart(cart);
         }
         
         //If they enter a character other than S, V, E, or D, exit the program.
