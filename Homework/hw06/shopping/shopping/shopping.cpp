@@ -54,9 +54,11 @@ void PrintCart(const map<string, product> &cart){
 bool ItemIsProduct(const string &item, const map<string,product> &inventory){
     bool isitem = true;
     for(auto it:inventory){
-        isitem = (it.first == item);
+        if(item == it.first){
+            return isitem;
+        }
     }
-    return isitem;
+    return false;
 }
 
 //Calculate the total cost of the shopping cart contents

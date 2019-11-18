@@ -50,30 +50,27 @@ int main(int argc, const char * argv[]) {
             //Get a product choice from the user
             std::cout << "\nWhich product would you like? " << std::endl;
             std::getline(std::cin, item);
-            
+            if(!ItemIsProduct(item, inventory)){
+                std::cout << item << " is not available.\n" << std::endl;
+                continue;
+            }
             for(auto p: inventory){
                 //Make sure the entered item is one of the options.
-                if(item != p.first){
-                    std::cout << "That is not one of the products offered.\n"
-                    << std::endl;
-                    break;
-                }
-                else{
+                if(item == p.first){
                     //Create a new entry in the shopping cart and get quantity
                     cart[item] = inventory[item];
                     //If-else selection for proper pluralization of unittypes
                     if(item == "Bread"){
                         std::cout << "Enter how many loaves you want: " << std::endl;
                         }
-                    else
+                    else{
                         std::cout << "Enter how many " << (p.second).unittype << "s you want: " << std::endl;
+                    }
+                    //Update the cart with the desired unit quantity
+                    std::cin >> itemcount;
+                    (cart[item]).units = itemcount;
+                    std::cin.ignore();
                 }
-
-                //Update the cart with the desired unit quantity
-                std::cin >> itemcount;
-                (cart[item]).units = itemcount;
-                std::cin.ignore();
-                break;
             }
         }
         
