@@ -23,9 +23,12 @@ Color3::Color3(int R, int G, int B) {
 }
 
 int Color3::weightedSum() const {
-	// Implement Y = 0.2126R + 0.7152G + 0.0722B
-	// Ensure values are inside the range 0 to 255
-	return 0;
+    int R = (2.126 * r);
+    int G = (.7152 * g);
+    int B =(.0722 * b);
+    if((R > 255 || R < 0) || (G > 255 || G < 0) || (B > 255 || B < 0))
+        return 0;
+    return (R + G + B);
 }
 
 char Color3::asciiValue() const {

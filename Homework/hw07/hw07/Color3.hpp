@@ -14,7 +14,7 @@ public:
 	Color3(int R, int G, int B);
 
 	// Returns 0.2126R + 0.7152G + 0.0722B
-	int weightedSum() const;
+    int weightedSum() const;
 
 	// Returns an ASCII char representing darkness
 	// e.g. ' ' = WHITE and 'W' = BLACK
