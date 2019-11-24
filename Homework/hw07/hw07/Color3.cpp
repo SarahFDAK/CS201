@@ -23,19 +23,15 @@ Color3::Color3(int R, int G, int B) {
 }
 
 int Color3::weightedSum() const {
-    int R = (2.126 * r);
-    int G = (.7152 * g);
-    int B =(.0722 * b);
-    if((R > 255 || R < 0) || (G > 255 || G < 0) || (B > 255 || B < 0))
-        return 0;
-    return (R + G + B);
+    int c = (.2126 * r) + (.7152 * g) + (.0722 * b);
+    return c < 0 ? 0 : c > 255 ? 255 : c;
 }
 
 char Color3::asciiValue() const {
 	// Use at least 16 characters, sort these from dark to light
 	// or light to dark and then map the weightedSum() to the range
 	// 0 to 15. Please pick your own characters
-	const char values[] = "ABCDEFGHIJKLMNOP";
+	const char values[] = "MNXWacruopqb:;'. ";
 	unsigned darkness = 0;
 	return values[darkness];
 }

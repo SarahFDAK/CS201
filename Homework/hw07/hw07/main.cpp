@@ -7,8 +7,12 @@
 //
 
 #include <iostream>
+#include "Color3.hpp"
+#include "Image3.hpp"
 
 int main(int argc, const char * argv[]) {
-
+    Color3 Black(255, 255, 255);
+    int B = Black.weightedSum();
+    std::cout << B << std::endl;
     return 0;
 }
