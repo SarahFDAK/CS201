@@ -6,13 +6,16 @@
 
 // Image3 Constructor
 Image3::Image3(unsigned width, unsigned height) {
-	// TODO: resize the pixels array
-	// TODO: initialize the internal w and h members
+    pixels.resize(width * height);
+    w = width;
+    h = height;
 }
 
 // Return a pixel from the image
 const Color3& Image3::getPixel(unsigned x, unsigned y) const {
-	// TODO: Add error handling for unknown pixels
+	
+    
+    // TODO: Add error handling for unknown pixels
 	// TERRIBLE OPTION 1: throw
 	// BETTER OPTION 2: return a color
 	// Hint: maybe this is already in the class?

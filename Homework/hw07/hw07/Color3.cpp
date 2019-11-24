@@ -23,8 +23,7 @@ Color3::Color3(int R, int G, int B) {
 }
 
 int Color3::weightedSum() const {
-    int c = (.2126 * r) + (.7152 * g) + (.0722 * b);
-    return c < 0 ? 0 : c > 255 ? 255 : c;
+    return saturate((.2126 * r) + (.7152 * g) + (.0722 * b), 255);
 }
 
 char Color3::asciiValue() const {
@@ -32,7 +31,7 @@ char Color3::asciiValue() const {
 	// or light to dark and then map the weightedSum() to the range
 	// 0 to 15. Please pick your own characters
 	const char values[] = "MNXWacruopqb:;'. ";
-	unsigned darkness = 0;
+	unsigned darkness = weightedSum() % 15;
 	return values[darkness];
 }
 
@@ -47,5 +46,15 @@ std::ostream& operator<<(std::ostream& ostr, const Color3& color) {
 
 std::istream& operator>>(std::istream& istr, Color3& color) {
 	// Implement your own input for a Color3
-	return istr;
+    int r, g, b;
+    
+    istr >> r;
+    istr >> g;
+    istr >> b;
+    
+    color.r = saturate(r, 255);
+    color.g = saturate(g, 255);
+    color.b = saturate(b, 255);
+    
+    return istr;
 }
