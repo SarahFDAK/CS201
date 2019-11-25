@@ -6,12 +6,12 @@
 //  Copyright © 2019 Sarah Carter. All rights reserved.
 //
 
-#ifndef error_checks_hpp
-#define error_checks_hpp
+#ifndef encryption_hpp
+#define encryption_hpp
 
 #include <stdio.h>
 #include <string>
 
-bool LettersOnly(const std::string &original);
+std::string encrypt(const std::string &original, const int &shift);
 
 #endif /* error_checks_hpp */
