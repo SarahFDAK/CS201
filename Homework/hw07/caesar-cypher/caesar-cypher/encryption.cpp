@@ -9,7 +9,8 @@
 #include "encryption.hpp"
 
 std::string encrypt(const std::string &original, const int &shift){
-    std::string shifted;
+    std::string shifted = original;
+
     for(size_t i = 0; i < original.size(); i++){
         if(original[i] >= 'A' || original[i] <= ('Z' - shift) || original[i] >= 'a'
            || original[i] <= ('z' - shift)){
