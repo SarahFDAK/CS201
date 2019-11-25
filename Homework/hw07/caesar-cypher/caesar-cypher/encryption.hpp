@@ -14,5 +14,6 @@
 #include <string>
 
 std::string encrypt(const std::string &original, const int &shift);
+bool isPositiveInt(const int &shift);
 
 #endif /* error_checks_hpp */
