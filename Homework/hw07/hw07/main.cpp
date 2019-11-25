@@ -20,21 +20,27 @@ using std::ofstream;
 using std::ifstream;
 
 int main(int argc, const char * argv[]) {
+    Color3 myColor(0,0,0);
+    
+    ofstream fout("testfile.txt");
+    std::cin >> myColor;
+    fout << myColor;
+    cout << myColor << endl;
+    
+    Image3 myImage(4, 4);
+    cout << myImage << endl;
+    myImage.loadPPM("parrot.ppm");
+    fout << myImage;
+    fout.close();
+    
+    ifstream fin("textfile.txt");
     std::string line;
-    ifstream fin {"parrot.ppm"};
-    if(!fin){
+    std::getline(fin, line);
+    if(!fin)
         return 0;
-    }
-    while(true){
-        std::getline(fin, line);
-        if(!fin){
-            if(fin.eof())
-                return true;
-            else
-                return false;
-        }
-        else
-            cout << line << endl;
-    }
+    cout << line << endl;
+
+    fin.close();
+    
     return 0;
 }
