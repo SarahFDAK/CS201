@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BAB6A0F2392393300ACF5CF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3BAB6A0E2392393300ACF5CF /* main.cpp */; };
+		3BAB6A0F2392393300ACF5CF /* thermostat-main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3BAB6A0E2392393300ACF5CF /* thermostat-main.cpp */; };
 		3BAB6A172392395500ACF5CF /* Agent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3BAB6A152392395500ACF5CF /* Agent.cpp */; };
 		3BAB6A1A2392395F00ACF5CF /* Environment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3BAB6A182392395F00ACF5CF /* Environment.cpp */; };
 		3BAB6A1D2392396A00ACF5CF /* Simulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3BAB6A1B2392396A00ACF5CF /* Simulator.cpp */; };
@@ -27,7 +27,7 @@
 
 /* Begin PBXFileReference section */
 		3BAB6A0B2392393300ACF5CF /* hw08 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hw08; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BAB6A0E2392393300ACF5CF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3BAB6A0E2392393300ACF5CF /* thermostat-main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "thermostat-main.cpp"; sourceTree = "<group>"; };
 		3BAB6A152392395500ACF5CF /* Agent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Agent.cpp; sourceTree = "<group>"; };
 		3BAB6A162392395500ACF5CF /* Agent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Agent.hpp; sourceTree = "<group>"; };
 		3BAB6A182392395F00ACF5CF /* Environment.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Environment.cpp; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		3BAB6A0D2392393300ACF5CF /* hw08 */ = {
 			isa = PBXGroup;
 			children = (
-				3BAB6A0E2392393300ACF5CF /* main.cpp */,
+				3BAB6A0E2392393300ACF5CF /* thermostat-main.cpp */,
 				3BAB6A152392395500ACF5CF /* Agent.cpp */,
 				3BAB6A162392395500ACF5CF /* Agent.hpp */,
 				3BAB6A182392395F00ACF5CF /* Environment.cpp */,
@@ -135,7 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BAB6A1A2392395F00ACF5CF /* Environment.cpp in Sources */,
-				3BAB6A0F2392393300ACF5CF /* main.cpp in Sources */,
+				3BAB6A0F2392393300ACF5CF /* thermostat-main.cpp in Sources */,
 				3BAB6A1D2392396A00ACF5CF /* Simulator.cpp in Sources */,
 				3BAB6A172392395500ACF5CF /* Agent.cpp in Sources */,
 			);
