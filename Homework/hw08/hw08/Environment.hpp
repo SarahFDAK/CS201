@@ -11,4 +11,22 @@
 
 #include <stdio.h>
 
+class Environment{
+public:
+    Environment() : _temperature(70), _heater(0){
+    }
+    
+    Environment(int temp) : _temperature(temp){
+    }
+    
+    void setTemp(int temp){
+        _temperature = temp;
+    }
+    
+private:
+    int _temperature;
+    bool _heater;
+};
+
+
 #endif /* Environment_hpp */
