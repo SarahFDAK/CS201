@@ -11,4 +11,15 @@
 
 #include <stdio.h>
 
+class Agent {
+public:
+    Agent(){};
+    
+    
+private:
+    int _currentTemp;
+    int _userTemp;
+    bool _heaterOn;
+};
+
 #endif /* Agent_hpp */
