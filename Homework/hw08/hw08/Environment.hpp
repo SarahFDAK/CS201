@@ -13,19 +13,28 @@
 
 class Environment{
 public:
-    Environment() : _temperature(70), _heater(0){
-    }
-    
-    Environment(int temp) : _temperature(temp){
+    Environment() : _temperature(70), _heaterStat(0){
     }
     
     void setTemp(int temp){
         _temperature = temp;
     }
     
+    int getTemp() const {
+        return _temperature;
+    }
+    
+    void setHeaterStat(int onoff){
+        _heaterStat = onoff;
+    }
+    
+    int getHeaterStat() const {
+        return _heaterStat;
+    }
+    
 private:
     int _temperature;
-    bool _heater;
+    int _heaterStat;
 };
 
 
