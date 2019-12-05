@@ -15,3 +15,9 @@ void Environment::setTemp(int temp){
 void Environment::setHeaterStat(int onoff){
     _heaterStat = onoff;
 }
+
+void Environment::iteration(){
+    if(_heaterStat == 0)
+        _temperature --;
+    _temperature ++;
+}

@@ -17,6 +17,7 @@ public:
     
     void setTemp(int temp);
     void setHeaterStat(int onoff);
+    void iteration();
         
 private:
     int _temperature;
