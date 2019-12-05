@@ -8,4 +8,10 @@
 
 #include "Environment.hpp"
 
+void Environment::setTemp(int temp){
+    _temperature = temp;
+}
 
+void Environment::setHeaterStat(int onoff){
+    _heaterStat = onoff;
+}
