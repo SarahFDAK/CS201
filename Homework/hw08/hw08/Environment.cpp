@@ -8,9 +8,6 @@
 
 #include "Environment.hpp"
 
-void Environment::setTemp(int temp){
-    _temperature = temp;
-}
 
 void Environment::setHeaterStat(int onoff){
     _heaterStat = onoff;
@@ -20,4 +17,8 @@ void Environment::iteration(){
     if(_heaterStat == 0)
         _temperature --;
     _temperature ++;
+}
+
+int Environment::currentTemp(){
+    return _temperature;
 }

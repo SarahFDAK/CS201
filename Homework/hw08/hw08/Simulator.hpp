@@ -11,4 +11,11 @@
 
 #include <stdio.h>
 
+class Simulator {
+public:
+    
+private:
+    
+};
+
 #endif /* Simulator_hpp */

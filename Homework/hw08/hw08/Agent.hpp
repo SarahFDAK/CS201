@@ -10,11 +10,15 @@
 #define Agent_hpp
 
 #include <stdio.h>
+#include "Environment.hpp"
 
 class Agent {
 public:
     Agent(){};
     
+    void perceive(Environment currentTemp());
+    void think();
+    void act(Environment);
     
 private:
     int _currentTemp;
