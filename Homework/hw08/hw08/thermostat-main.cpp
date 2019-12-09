@@ -8,7 +8,14 @@
 
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
+#include "Simulator.hpp"
 
+int main(int argc, const char * argv[]) {
+    Environment user {};
+    Agent smith {};
+    Simulator thermostat {};
+    
+    thermostat.run(user, smith);
+    
     return 0;
 }

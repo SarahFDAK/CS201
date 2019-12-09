@@ -16,6 +16,7 @@
 
 class Simulator {
 public:
+    Simulator() {};
     void run(Environment user, Agent smith);
     int askOwner();
 };
