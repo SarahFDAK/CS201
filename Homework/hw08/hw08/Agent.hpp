@@ -21,7 +21,7 @@ public:
     int think();
     void act(Environment user);
     
-private:
+//private:
     int _currentTemp;
     bool _heaterOn;
 };

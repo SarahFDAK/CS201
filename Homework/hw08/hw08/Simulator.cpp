@@ -11,16 +11,22 @@
 
 void Simulator::run(Environment user, Agent smith){
     while(true){
-        askOwner();
-        if(askOwner() == -1){
+        int temp1;
+        temp1 = askOwner();
+        if(temp1 == -1){
             break;
         }
-        smith._userTemp = askOwner();
+        smith._userTemp = temp1;
         for(int i = 1; i < 10; i++){
+            smith.act(user);
+            std::cout << user._heaterStat << std::endl;
+            std::cout << smith.think() << std::endl;
             user.iteration();
             smith.perceive(user);
             smith.think();
-            smith.act(user);
+            std::cout << smith._userTemp << std::endl;
+            std::cout << smith._currentTemp << std::endl;
+            std::cout << user.tempNow() << std::endl;
         }
     }
 }

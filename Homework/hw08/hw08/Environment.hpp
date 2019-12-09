@@ -15,11 +15,11 @@ class Environment{
 public:
     Environment() : _temperature(70), _heaterStat(0) {};
     
-    void setHeaterStat(int onoff);
     void iteration();
+    void setHeaterStat(int onoff);
     int tempNow() const;
         
-private:
+//private:
     int _temperature;
     int _heaterStat;
 };

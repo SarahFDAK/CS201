@@ -9,14 +9,15 @@
 #include "Environment.hpp"
 
 
-void Environment::setHeaterStat(int onoff){
-    _heaterStat = onoff;
+void Environment::iteration(){
+    if(_heaterStat == 1)
+        _temperature ++;
+    else
+        _temperature --;
 }
 
-void Environment::iteration(){
-    if(_heaterStat == 0)
-        _temperature --;
-    _temperature ++;
+void Environment::setHeaterStat(int onoff){
+    _heaterStat = onoff;
 }
 
 int Environment::tempNow() const{
