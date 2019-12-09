@@ -7,3 +7,7 @@
 //
 
 #include "Agent.hpp"
+
+void Agent::perceive(Environment user){
+    _currentTemp = user.tempNow();
+}

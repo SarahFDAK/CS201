@@ -17,7 +17,7 @@ public:
     
     void setHeaterStat(int onoff);
     void iteration();
-    int currentTemp();
+    int tempNow() const;
         
 private:
     int _temperature;

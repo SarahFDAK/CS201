@@ -19,6 +19,6 @@ void Environment::iteration(){
     _temperature ++;
 }
 
-int Environment::currentTemp(){
+int Environment::tempNow() const{
     return _temperature;
 }

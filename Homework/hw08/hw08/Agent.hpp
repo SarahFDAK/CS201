@@ -16,9 +16,9 @@ class Agent {
 public:
     Agent(){};
     
-    void perceive(Environment currentTemp());
+    void perceive(Environment user);
     void think();
-    void act(Environment);
+    void act(Environment user);
     
 private:
     int _currentTemp;
