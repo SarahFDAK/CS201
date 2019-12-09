@@ -11,11 +11,13 @@
 
 #include <stdio.h>
 
+#include "Environment.hpp"
+#include "Agent.hpp"
+
 class Simulator {
 public:
-    
-private:
-    
+    void run(Environment user, Agent smith);
+    int askOwner();
 };
 
 #endif /* Simulator_hpp */

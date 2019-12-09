@@ -15,6 +15,7 @@
 class Agent {
 public:
     Agent(){};
+    int _userTemp;
     
     void perceive(Environment user);
     int think();
@@ -22,7 +23,6 @@ public:
     
 private:
     int _currentTemp;
-    int _userTemp;
     bool _heaterOn;
 };
 
