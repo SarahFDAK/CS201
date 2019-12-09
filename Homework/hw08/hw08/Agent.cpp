@@ -11,3 +11,13 @@
 void Agent::perceive(Environment user){
     _currentTemp = user.tempNow();
 }
+
+int Agent::think(){
+    if(_currentTemp < _userTemp)
+        return 1;
+    return 0;
+}
+
+void Agent::act(Environment user){
+    user.setHeaterStat(think());
+}

@@ -17,7 +17,7 @@ public:
     Agent(){};
     
     void perceive(Environment user);
-    void think();
+    int think();
     void act(Environment user);
     
 private:
