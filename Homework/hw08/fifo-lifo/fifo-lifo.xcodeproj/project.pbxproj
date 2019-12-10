@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B62D29C235687CD0077B871 /* fifo-lifo2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B62D29B235687CD0077B871 /* fifo-lifo2.cpp */; };
-		3B62D2A4235688400077B871 /* fofo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B62D2A2235688400077B871 /* fofo.cpp */; };
+		3B62D2A4235688400077B871 /* fofo2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B62D2A2235688400077B871 /* fofo2.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +26,8 @@
 /* Begin PBXFileReference section */
 		3B62D298235687CD0077B871 /* fifo-lifo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "fifo-lifo"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B62D29B235687CD0077B871 /* fifo-lifo2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "fifo-lifo2.cpp"; sourceTree = "<group>"; };
-		3B62D2A2235688400077B871 /* fofo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fofo.cpp; sourceTree = "<group>"; };
-		3B62D2A3235688400077B871 /* fofo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fofo.hpp; sourceTree = "<group>"; };
+		3B62D2A2235688400077B871 /* fofo2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fofo2.cpp; sourceTree = "<group>"; };
+		3B62D2A3235688400077B871 /* fofo2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fofo2.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				3B62D29B235687CD0077B871 /* fifo-lifo2.cpp */,
-				3B62D2A2235688400077B871 /* fofo.cpp */,
-				3B62D2A3235688400077B871 /* fofo.hpp */,
+				3B62D2A2235688400077B871 /* fofo2.cpp */,
+				3B62D2A3235688400077B871 /* fofo2.hpp */,
 			);
 			path = "fifo-lifo";
 			sourceTree = "<group>";
@@ -125,7 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B62D29C235687CD0077B871 /* fifo-lifo2.cpp in Sources */,
-				3B62D2A4235688400077B871 /* fofo.cpp in Sources */,
+				3B62D2A4235688400077B871 /* fofo2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

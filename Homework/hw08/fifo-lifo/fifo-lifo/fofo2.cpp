@@ -9,31 +9,32 @@
 #include <iostream>
 #include <vector>
 
-#include "fofo.hpp"
+#include "fofo2.hpp"
 
 using std::vector;
 using std::string;
 using std::cout;
 
-
+//Define FiFo functions, though the push function seems redundant.
+//FiFo and LiFo essentially create the same vectors, they just remove
+//different elements from them.
 void FifoPush(vector<string> & container, const string & item){
     container.push_back(item);
 }
-
-
+//Removes the element from the beginning of the vector.
 void FifoPop(vector<string> & container){
     container.erase(container.begin());
 }
 
+//Define LiFo functions
 void LifoPush(vector<string> & container, const string & item){
     container.push_back(item);
 }
-
 void LifoPop(vector<string> & container){
     container.pop_back();
 }
 
-
+//Check if the container is empty.
 bool IsContainerEmpty(const vector<string> & container){
     if(container.size()==0){
         return true;
@@ -41,13 +42,15 @@ bool IsContainerEmpty(const vector<string> & container){
     return false;
 }
 
-
+//Print the vector
 void PrintContainer(const vector<string> & container){
     for(string item: container){
         cout << item << std::endl;
     }
+    cout << std::endl;
 }
 
+//Test if the FiFo function works
 bool TestFifo(){
     vector<string> fifo;
     for(char x = 'A'; x < 'E'; x++){
@@ -66,6 +69,8 @@ bool TestFifo(){
     std::cout << "FiFo womp womp..." << std::endl;
     return false;
 }
+
+//Test if the LiFo function works
 bool TestLifo(){
     vector<string> lifo;
     for(char x = 'A'; x < 'E'; x++){

@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <iostream>
 
+//Delcare all functions to be used.
 void FifoPush(std::vector<std::string> & container, const std::string & item);
 void FifoPop(std::vector<std::string> & container);
 
