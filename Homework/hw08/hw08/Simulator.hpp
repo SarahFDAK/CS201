@@ -11,6 +11,7 @@
 
 #include "Agent.hpp"
 
+//Declare Simulator class and methods
 class Simulator {
 public:
     Simulator() {};

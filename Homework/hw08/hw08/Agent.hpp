@@ -11,6 +11,7 @@
 
 #include "Environment.hpp"
 
+//Declare Agent class, methods, and members.
 class Agent {
 public:
     Agent(){};
@@ -20,7 +21,7 @@ public:
     int think();
     void act(Environment &user);
     
-//private:
+private:
     int _currentTemp;
     int _heaterOn;
 };

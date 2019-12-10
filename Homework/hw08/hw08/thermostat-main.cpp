@@ -11,10 +11,12 @@
 #include "Simulator.hpp"
 
 int main(int argc, const char * argv[]) {
+    //Create objects for use in the program
     Environment user {};
     Agent smith {};
     Simulator thermostat {};
     
+    //Run the simulator.
     thermostat.run(user, smith);
     
     return 0;

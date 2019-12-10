@@ -12,6 +12,8 @@
 #include <stdio.h>
 #include <iostream>
 
+//Declare Environment class, methods, and members. Set default environment
+//to 70 degrees with the heater off.
 class Environment{
 public:
     Environment() : _temperature(70), _heaterStat(0) {};
@@ -20,7 +22,7 @@ public:
     void setHeaterStat(int onoff);
     int tempNow() const;
         
-//private:
+private:
     int _temperature;
     int _heaterStat;
 };
