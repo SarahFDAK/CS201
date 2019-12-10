@@ -1,10 +1,11 @@
 //
-//  main.cpp
-//  hw08
-//
-//  Created by Sarah Carter on 11/29/19.
-//  Copyright © 2019 Sarah Carter. All rights reserved.
-//
+//  thermostat.main.cpp
+//  Sarah Carter
+//  12/7/19
+//  This program creates an interactive environment that asks the user for
+//  their desired room temperature, then reports the activities of the
+//  thermostat and heater, as well as the changes in room temperature. Every
+//  ten loops, it checks in with the user for a temperature.
 
 #include <iostream>
 
