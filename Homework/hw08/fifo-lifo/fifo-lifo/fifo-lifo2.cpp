@@ -16,38 +16,6 @@ using std::string;
 using std::cout;
 using std::endl;
 
-//bool TestFifo(){
-//    std::string fifo;
-//    for(char x = 'A'; x < 'E'; x++){
-//        FifoPush(fifo, x);
-//    }
-//    size_t f = fifo.size() - 1;
-//    if(fifo[f] == 'A'){
-//        FifoLifoPop(fifo);
-//        if(fifo[f] != 'A'){
-//            std::cout << "FiFo works!" << std::endl;
-//            return true;
-//        }
-//    }
-//    std::cout << "FiFo womp womp..." << std::endl;
-//    return false;
-//}
-//bool TestLifo(){
-//    std::string lifo;
-//    for(char x = 'A'; x < 'E'; x++){
-//        LifoPush(lifo, x);
-//    }
-//    size_t l = lifo.size() - 1;
-//    if(lifo[l] == 'D'){
-//        FifoLifoPop(lifo);
-//        if(lifo[l] != 'D'){
-//            std::cout << "LiFo works!" << std::endl;
-//            return true;
-//        }
-//    }
-//    std::cout << "LiFo womp womp..." << std::endl;
-//    return false;
-//}
 
 int main(int argc, const char * argv[]) {
     vector<string> fifocontainer;
@@ -74,19 +42,17 @@ int main(int argc, const char * argv[]) {
     cout << "LiFo continer: \n";
     PrintContainer(lifocontainer);
     
-    std::string FirstIn = fifocontainer[fifocontainer.size()-1];
-    std::string LastIn = lifocontainer[lifocontainer.size()-1];
     
-    FifoLifoPop(fifocontainer);
-    FifoLifoPop(lifocontainer);
+    FifoPop(fifocontainer);
+    LifoPop(lifocontainer);
     
     cout << "FiFo container, first in removed: \n";
     PrintContainer(fifocontainer);
-    cout << "LiFo container, first in removed: \n";
+    cout << "LiFo container, last in removed: \n";
     PrintContainer(lifocontainer);
     
-//    TestFifo();
-//    TestLifo();
-//
+    TestFifo();
+    TestLifo();
+
     return 0;
 }
