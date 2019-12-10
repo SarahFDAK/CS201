@@ -11,15 +11,19 @@
 
 
 void Environment::iteration(){
-    std::cout << "Environment's hs " << _heaterStat << std::endl;
     if(_heaterStat == 1)
         _temperature ++;
     else
         _temperature --;
+    std::cout << "Environment's temp: " << _temperature << std::endl;
 }
 
 void Environment::setHeaterStat(int onoff){
     _heaterStat = onoff;
+    if(_heaterStat == 1)
+        std::cout << "The heater is on." << std::endl;
+    else
+        std::cout << "The heater is off." << std::endl;
 }
 
 int Environment::tempNow() const{

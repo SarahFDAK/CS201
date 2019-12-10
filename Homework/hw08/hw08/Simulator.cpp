@@ -6,7 +6,6 @@
 //  Copyright © 2019 Sarah Carter. All rights reserved.
 //
 
-#include <iostream>
 #include "Simulator.hpp"
 
 void Simulator::run(Environment &user, Agent &smith){
@@ -21,10 +20,9 @@ void Simulator::run(Environment &user, Agent &smith){
         }
         smith._userTemp = temp1;
         for(int i = 1; i < 10; i++){
-            smith.act(user);
             user.iteration();
             smith.perceive(user);
-            smith.think();
+            smith.act(user);
         }
     }
 }

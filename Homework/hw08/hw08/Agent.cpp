@@ -11,14 +11,26 @@
 
 void Agent::perceive(Environment &user){
     _currentTemp = user.tempNow();
+    std::cout << "Perceive: The thermostat reads temp: " << _currentTemp
+    << std::endl;
 }
 
 int Agent::think(){
-    if(_currentTemp < _userTemp)
+    if(_currentTemp < _userTemp){
+        std::cout << "Think: Turn the heater on." << std::endl;
         return 1;
-    return 0;
+    }
+    else{
+        std::cout << "Think: Turn the heater off." << std::endl;
+        return 0;
+    }
 }
 
 void Agent::act(Environment &user){
     user.setHeaterStat(think());
+    if(user._heaterStat == 1){
+        std::cout << "Act: Thermostat has turned heater on.\n" << std::endl;
+    }
+    else
+        std::cout << "Act: Thermostat has turned heater off.\n" << std::endl;
 }

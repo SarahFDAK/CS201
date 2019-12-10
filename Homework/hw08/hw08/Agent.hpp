@@ -9,7 +9,6 @@
 #ifndef Agent_hpp
 #define Agent_hpp
 
-#include <stdio.h>
 #include "Environment.hpp"
 
 class Agent {

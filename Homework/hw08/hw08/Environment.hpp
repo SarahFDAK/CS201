@@ -10,6 +10,7 @@
 #define Environment_hpp
 
 #include <stdio.h>
+#include <iostream>
 
 class Environment{
 public:

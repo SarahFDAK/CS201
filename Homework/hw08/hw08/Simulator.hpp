@@ -9,9 +9,6 @@
 #ifndef Simulator_hpp
 #define Simulator_hpp
 
-#include <stdio.h>
-
-#include "Environment.hpp"
 #include "Agent.hpp"
 
 class Simulator {
