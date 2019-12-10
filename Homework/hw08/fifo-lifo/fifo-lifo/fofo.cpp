@@ -20,10 +20,9 @@ void FifoPush(vector<string> & container, const string & item){
 }
 
 
-void FifoPop(vector<string> & container, const string & item){
+void FifoLifoPop(vector<string> & container){
     container.pop_back();
 }
-
 
 void LifoPush(vector<string> & container, const string & item){
     container.push_back(item);
@@ -42,6 +41,8 @@ void PrintContainer(const vector<string> & container){
     cout << "The entered items are: " << std::endl;
     
     for(string item: container){
-        cout<< item << std::endl;
+        cout << item << std::endl;
     }
 }
+
+
