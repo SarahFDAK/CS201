@@ -15,8 +15,8 @@
 class Simulator {
 public:
     Simulator() {};
-    void run(Environment &user, Agent &smith);
-    int askOwner();
+    void run(Environment &user, Agent &smith) const;
+    int askOwner() const;
 };
 
 #endif /* Simulator_hpp */

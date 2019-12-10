@@ -20,7 +20,7 @@ void Agent::perceive(Environment &user){
 //Check if the current temperature is less than what the user requested.
 //Report the thermostat's decision to turn the heater on or off and return
 //1 or 0, depending on that choice.
-int Agent::think(){
+int Agent::think() const{
     if(_currentTemp < _userTemp){
         std::cout << "Think: Turn the heater on." << std::endl;
         return 1;

@@ -18,7 +18,7 @@ public:
     int _userTemp;
     
     void perceive(Environment &user);
-    int think();
+    int think() const;
     void act(Environment &user);
     
 private:

@@ -9,7 +9,7 @@
 #include "Simulator.hpp"
 
 //Main run function
-void Simulator::run(Environment &user, Agent &smith){
+void Simulator::run(Environment &user, Agent &smith) const{
     //Keep the loop going until user exits
     while(true){
         int temp1;
@@ -35,7 +35,7 @@ void Simulator::run(Environment &user, Agent &smith){
 }
 
 //Ask for the user's desired temperature
-int Simulator::askOwner(){
+int Simulator::askOwner() const{
     int temp;
     std::cout <<"Set your desired thermostat temperature. Enter -1 to exit."
     << std::endl;
