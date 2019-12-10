@@ -48,7 +48,7 @@ int main(int argc, const char * argv[]) {
     //Print filled vectors
     cout << "FiFo container: \n";
     PrintContainer(fifocontainer);
-    cout << "LiFo continer: \n";
+    cout << "LiFo container: \n";
     PrintContainer(lifocontainer);
     
     //Remove first in and last in from fifo and lifo vectors,
