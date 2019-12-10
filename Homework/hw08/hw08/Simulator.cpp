@@ -9,9 +9,12 @@
 #include <iostream>
 #include "Simulator.hpp"
 
-void Simulator::run(Environment user, Agent smith){
+void Simulator::run(Environment &user, Agent &smith){
     while(true){
         int temp1;
+        std::cout << "Current Room Temperature: " << user._temperature
+        << std::endl;
+        
         temp1 = askOwner();
         if(temp1 == -1){
             break;
@@ -19,21 +22,16 @@ void Simulator::run(Environment user, Agent smith){
         smith._userTemp = temp1;
         for(int i = 1; i < 10; i++){
             smith.act(user);
-            std::cout << user._heaterStat << std::endl;
-            std::cout << smith.think() << std::endl;
             user.iteration();
             smith.perceive(user);
             smith.think();
-            std::cout << smith._userTemp << std::endl;
-            std::cout << smith._currentTemp << std::endl;
-            std::cout << user.tempNow() << std::endl;
         }
     }
 }
 
 int Simulator::askOwner(){
     int temp;
-    std::cout << "Set your desired thermostat temperature. Enter -1 to exit."
+    std::cout <<"Set your desired thermostat temperature. Enter -1 to exit."
     << std::endl;
     std::cin >> temp;
     return temp;

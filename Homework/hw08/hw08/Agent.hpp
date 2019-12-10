@@ -17,13 +17,13 @@ public:
     Agent(){};
     int _userTemp;
     
-    void perceive(Environment user);
+    void perceive(Environment &user);
     int think();
-    void act(Environment user);
+    void act(Environment &user);
     
 //private:
     int _currentTemp;
-    bool _heaterOn;
+    int _heaterOn;
 };
 
 #endif /* Agent_hpp */

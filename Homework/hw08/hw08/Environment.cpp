@@ -7,9 +7,11 @@
 //
 
 #include "Environment.hpp"
+#include <iostream>
 
 
 void Environment::iteration(){
+    std::cout << "Environment's hs " << _heaterStat << std::endl;
     if(_heaterStat == 1)
         _temperature ++;
     else

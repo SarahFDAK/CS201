@@ -9,7 +9,7 @@
 #include "Agent.hpp"
 #include <iostream>
 
-void Agent::perceive(Environment user){
+void Agent::perceive(Environment &user){
     _currentTemp = user.tempNow();
 }
 
@@ -19,7 +19,6 @@ int Agent::think(){
     return 0;
 }
 
-void Agent::act(Environment user){
+void Agent::act(Environment &user){
     user.setHeaterStat(think());
-    std::cout << user._heaterStat << std::endl;
 }
