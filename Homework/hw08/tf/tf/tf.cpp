@@ -22,9 +22,23 @@ using std::string;
 using std::istringstream;
 
 const vector<string> stopWords {"the", "but", "and", "or", "for"};
-const vector<char> stopChars {'.', ',', '\"'};
+const vector<char> stopChars ('"', '\'', ',', '.', '!', '?');
+
+//void fillStopChars(){
+//    for(char c0 = 0; c0 < 'A'; c0++)
+//        stopChars.push_back(c0);
+//
+//    for(char c = 91; c < 'a'; c++)
+//        stopChars.push_back(c);
+//
+//    for(char c1 = 123; c1 < 126; c1++){
+//        stopChars.push_back(c1);
+//    }
+//}
 
 int main(int argc, const char * argv[]) {
+//    fillStopChars();
+    
     std::map<string, int> words;
     ifstream fin("1661-0.txt");
     if(!fin){
@@ -51,10 +65,14 @@ int main(int argc, const char * argv[]) {
             std::transform(word.begin(), word.end(), word.begin(),
                            [](char c){return std::tolower(c);});
             for(char c:stopChars){
-                while(word[0] == c)
-                    word.erase(0,1);
-                while(word[word.size()-1] == c)
-                    word.pop_back();
+                for(size_t i = 0; i < 3; i++){
+                    if(word[0] == c)
+                        word.erase(0,1);
+                }
+                for(size_t e = word.size() - 1; e > word.size()-2; e--){
+                    if(word[word.size()-1] == c)
+                        word.pop_back();
+                }
                 cout << word << endl;
             }
             for(string n:stopWords){
