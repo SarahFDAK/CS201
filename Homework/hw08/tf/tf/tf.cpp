@@ -22,7 +22,14 @@ using std::endl;
 using std::string;
 using std::istringstream;
 
-const vector<string> stopWords {"the", "but", "and", "or", "for"};
+const vector<string> stopWords {"the", "but", "and", "or", "for", "i", "of", "to",
+    "a", "in", "that", "it", "you", "was", "is", "are", "with", "as", "had", "at",
+    "were", "have", "has", "he", "she", "him", "his", "which", "me", "this", "we",
+    "hers", "what", "where", "when", "why", " ", "my", "us", "from", "there", "said",
+    "so", "her", "your", "an", "then", "do", "if", "could", "would", "by", "into",
+    "who", "will", "now"
+    
+};
 vector<char> stopChars {};
 
 void fillStopChars(){
@@ -38,7 +45,6 @@ void fillStopChars(){
 }
 
 string fixString(string &word, const vector<char> &letters){
-    cout << word << endl;
     string wordSub;
     for(char c:word){
         auto itv = find(letters.begin(), letters.end(), c);
@@ -65,7 +71,6 @@ int main(int argc, const char * argv[]) {
         std::getline(fin, line);
         if(!fin){
             if(fin.eof()){
-                cout << "Reached end of file." << endl;
                 break;
             }
             else{
@@ -87,19 +92,23 @@ int main(int argc, const char * argv[]) {
 //                           remove(word.begin(), word.end(), c));
 //                    }
 //                }
-            for(string n:stopWords){
-                if (n == word)
+            auto it = find(stopWords.begin(), stopWords.end(), word);
+            if(it != stopWords.end())
                     continue;
-            }
             if(words.count(word) == 0)
                 words[word] = 1;
             else
                 words[word] += 1;
         }
     }
-    std::pair<int, string> flip;
+    vector<std::pair<int, string>> flip;
     for(auto i:words){
-        cout << i.first << " " << i.second << endl;
+        flip.push_back({i.second, i.first});
     }
+    sort(flip.begin(), flip.end());
+    reverse(flip.begin(), flip.end());
+    
+    for(int a = 0; a < 20; a++)
+        cout << flip[a].first << " " << flip[a].second << endl;
     return 0;
 }
