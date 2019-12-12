@@ -5,6 +5,8 @@
 //  This program reads from a plain text copy of a book from the Gutenberg Project
 //  then prints the top 20 words used in the book. A large list of conjunctions,
 //  pronouns, prepositions, and linking verbs are excluded from the printout.
+//  My program reads The Adventures of Sherlock Holmes, by Arthur Conan Doyle.
+//  http://www.gutenberg.org/files/1661/1661-0.txt
 //
 
 #include <iostream>
